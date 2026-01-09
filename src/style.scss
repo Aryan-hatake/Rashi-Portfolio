@@ -5,15 +5,15 @@
 :root {
     --pri: rgb(19, 19, 19);
     --pri2: black;
-    --sec: rgb(224, 223, 223);
+    --sec: white;
     --sec2: rgb(170, 163, 163);
-    --bebo:"Bebas Neue", sans-serif;
+    --bebo: "Bebas Neue", sans-serif;
 }
 
 @font-face {
     font-family: Curvy;
     src: url(./assets/Gistesy.ttf);
-    
+
 }
 
 * {
@@ -23,6 +23,13 @@
 
     font-family: "Poppins", sans-serif;
     color: white;
+}
+
+@mixin h1() {
+    font-family: var(--bebo);
+
+    font-size: clamp(3rem, 10vw, 15rem);
+    white-space: nowrap;
 }
 
 html,
@@ -36,9 +43,8 @@ body {
         width: 100%;
 
         .Main {
-            height: 100%;
             width: 100%;
-
+            position: relative;
 
             nav {
                 background: var(--pri2);
@@ -46,6 +52,7 @@ body {
                 width: 100%;
                 position: sticky;
                 top: 0;
+                z-index: 5;
                 padding-inline: 4rem;
                 padding-block: 1rem;
                 border-bottom: 0.2rem solid var(--sec);
@@ -84,79 +91,229 @@ body {
                 }
             }
 
-            .Home {
-                height:calc(100% - 87.33px);
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap:2rem;
+            .Home-Cont {
+                height: fit-content;
+                border-bottom: 0.2rem solid var(--sec);
 
-                .left{
-                    height: 100%;
+                .Home {
+                    height: 100vh;
                     width: 100%;
-                    background: url("./images/5.jpeg");
-                    background-size: cover;
-                    background-position: top;
-                    border-bottom: 0.5rem solid var(--sec);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .left {
+                        height: 50%;
+                        width: 100%;
+                        background: url("./images/14.jpeg");
+                        background-size: cover;
+                        background-position: center;
+                        border-bottom: 0.5rem solid var(--sec);
+
+                    }
+
+                    .right {
+                        height: 50%;
+                        width: 100%;
+                        padding: 2rem;
+                        position: relative;
+
+                        .top {
+
+                            .name {
+                                position: relative;
+                                width: fit-content;
+
+
+                                h1 {
+                                    @include h1;
+                                }
+
+                                h3 {
+                                    font-family: "curvy";
+                                    font-weight: 100;
+                                    font-size: clamp(2rem, 8vw, 10rem);
+                                    position: absolute;
+                                    top: 80%;
+                                    right: 20%;
+                                }
+                            }
+                        }
+
+                        .center {
+                            position: absolute;
+                            width: 50%;
+                            top: 50%;
+                            right: 0;
+                            border-top: 0.4rem solid var(--sec2);
+                            padding-top: 1rem;
+
+                            p {
+                                color: var(--sec2);
+                                font-size: clamp(0.6rem, 2vw, 2rem);
+                            }
+                        }
+
+                        .bottom {
+
+                            position: absolute;
+                            bottom: 6%;
+                            right: 10%;
+
+                            button {
+                                padding-inline: 2rem;
+                                padding-block: 0.8rem;
+                                color: var(--pri);
+                                background: var(--sec);
+                                font-size: clamp(1rem, 4vw, 2rem);
+                                border: none;
+
+                            }
+                        }
+
+                    }
 
                 }
-                .right{
-                    height: 100%;
-                    width: 100%;
-                    padding: 2rem;
-                    position: relative;
-                    
-                    .top{
 
-                        .name{
-                            position: relative;
-                            width: fit-content;
+            }
 
-
-                            h1{
-                                font-family: var(--bebo) ;
-                                font-size: clamp(3rem,10vw,15rem);
-                                white-space: nowrap;
-                            }
-                            h3{
-                                font-family:"curvy";
-                                font-weight: 100;
-                                font-size: clamp(2rem,8vw,10rem);
-                                position: absolute;
-                                top: 80%;
-                                right: 20%;
-                            }
-                        }
-                    }
-                    .center{
-                        position: absolute;
-                        width: 50%;
-                        top: 50%;
-                        right: 0;
-                        border-top: 0.4rem solid var(--sec2);
-                        padding-top: 1rem;
-                        p{
-
-                            font-size: clamp(0.6rem,2vw,2rem);
-                        }
-                    }
-                    .bottom{
-                       
-                        button{
-                             padding-inline: 2rem;
-                             padding-block: 0.8rem;
-                             color: var(--pri);
-                             background: var(--sec);
-                             font-size: clamp(1rem,4vw,2rem);
-                             position: absolute;
-                             bottom: 6%;
-                             right: 10%;
-                            
-                        }
-                    }
-                    
-                }
+            .About {
                 
+                width: 100%;
+                background: var(--pri);
+                margin-top: 4rem;
+                border-bottom: 0.2rem solid var(--sec);
+                padding-bottom: 2rem;
+
+                .first {
+                    position: relative;
+                    width: fit-content;
+                    padding-left: 2rem;
+                    padding-top: 2rem;
+
+                    h1 {
+                        @include h1;
+                    }
+
+                    h3 {
+                        font-family: "curvy";
+                        font-weight: 100;
+                        font-size: clamp(1.4rem, 6vw, 8rem);
+                        position: absolute;
+                        top: 90%;
+                        left: 80%;
+                        rotate: -14deg;
+                        white-space: nowrap;
+                    }
+                }
+
+                .second {
+
+
+                    padding-right: 1rem;
+                    padding-top: 1rem;
+
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .right {
+                        width: 100%;
+                        height: 60vw;
+                        display: flex;
+                        justify-content: end;
+                        position: relative;
+                        z-index: 2;
+                        transform: translateY(10%) translateX(-9%) rotate(14deg);
+
+                        .img-Cont {
+                            width: 50%;
+                            height: 100%;
+                            background: var(--sec);
+                            padding: 1rem;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .left {
+                        width: 50%;
+                        height: 60vw;
+                        transform: translateY(-4%) rotate(-8deg) translateX(23%);
+
+                        .img-Cont {
+                            width: 100%;
+                            height: 100%;
+                            background: var(--sec);
+                            padding: 1rem;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+
+                .third {
+                    width: 100%;
+                    display: flex;
+                    padding-inline: 1rem;
+                    gap: 1rem;
+
+                    .left {
+                        width: 50%;
+
+                        h2 {
+                            margin-block: 2rem;
+                            white-space: nowrap;
+                            font-size: clamp(0.8rem, 4vw, 8rem);
+                        }
+
+                        p {
+                            color: var(--sec2);
+                            font-size: clamp(0.5rem, 2vw, 2rem);
+
+                        }
+                    }
+
+                    .right {
+                        width: 50%;
+
+                        h2 {
+                            margin-block: 2rem;
+                            white-space: nowrap;
+                            font-size: clamp(0.8rem, 4vw, 8rem);
+                        }
+
+                        p {
+                            color: var(--sec2);
+                            font-size: clamp(0.5rem, 2vw, 2rem);
+                        }
+                    }
+                }
+                .line{
+                    height: 0.1rem;
+                    width: 15rem;
+                    background-color: var(--sec2);
+                    margin-inline-start: 1rem;
+                    margin-block: 2rem ;
+
+
+                }
+                .journey{
+                    width: 100%;
+                    padding-inline: 1rem;
+                    p{
+                        font-size: clamp(0.5rem, 2vw, 2rem);
+                        color: var(--sec2);
+                    }
+                }
             }
         }
     }
@@ -166,44 +323,101 @@ body {
 
     html,
     body {
-    #root{
+        #root {
 
-    
-        .Main{
 
-            nav {
-                .milestone {
-                    display: flex;
+            .Main {
+
+                nav {
+                    .milestone {
+                        display: flex;
+                    }
+                }
+
+                .Home {}
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-width:1000px) {
+
+    html,
+    body {
+        #root {
+            .Main {
+                .Home-Cont {
+
+                    .Home {
+
+                        .left {
+                            flex-shrink: 0;
+                        }
+
+                        .right {
+                            flex-shrink: 0;
+                            height: 70%;
+
+                            .bottom {
+                                bottom: -4%;
+                            }
+                        }
+                    }
+                }
+
+                .About {
+                    margin-top: 10rem;
                 }
             }
-        .Home{
-           flex-direction: row;
-           .left{
-            width: 50%;
-            border-right: 0.5rem solid var(--sec);
-            border-bottom: 0px;
+        }
+    }
+}
 
-           }
-           .right{
-               width: 100%;
-            .top{
+@media (min-width:1000px) {
+    html {
+        body {
+            #root {
 
-                .name{
-                    h1{
-                        font-size: clamp(2rem,8vw,12rem);
+
+                .Main {
+                    .Home-Cont {
+
+                        .Home {
+                            flex-direction: row;
+
+                            .left {
+                                width: 50%;
+                                height: 100%;
+                                border-right: 0.5rem solid var(--sec);
+                                border-bottom: 0px;
+
+                            }
+
+                            .right {
+                                width: 100%;
+                                height: 100%;
+
+                                .top {
+
+                                    .name {
+                                        h1 {
+                                            font-size: clamp(2rem, 8vw, 12rem);
+                                        }
+                                    }
+                                }
+
+                                .bottom {
+
+
+                                    bottom: 10%;
+
+                                }
+
+                            }
+                        }
                     }
                 }
             }
-            .bottom{
-                button{
-
-                    bottom: 10%;
-                }
-            }
-            
-           }
         }
     }
-    }
-}
 }

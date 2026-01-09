@@ -2,9 +2,9 @@
 :root {
   --pri: rgb(19, 19, 19);
   --pri2: black;
-  --sec: rgb(224, 223, 223);
+  --sec: white;
   --sec2: rgb(170, 163, 163);
-  --bebo:"Bebas Neue", sans-serif;
+  --bebo: "Bebas Neue", sans-serif;
 }
 
 @font-face {
@@ -32,8 +32,8 @@ body #root {
 }
 html #root .Main,
 body #root .Main {
-  height: 100%;
   width: 100%;
+  position: relative;
 }
 html #root .Main nav,
 body #root .Main nav {
@@ -42,6 +42,7 @@ body #root .Main nav {
   width: 100%;
   position: sticky;
   top: 0;
+  z-index: 5;
   padding-inline: 4rem;
   padding-block: 1rem;
   border-bottom: 0.2rem solid var(--sec);
@@ -78,44 +79,50 @@ body #root .Main nav .ham {
   align-items: center;
   font-size: 2rem;
 }
-html #root .Main .Home,
-body #root .Main .Home {
-  height: calc(100% - 87.33px);
+html #root .Main .Home-Cont,
+body #root .Main .Home-Cont {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: 0.2rem solid var(--sec);
+}
+html #root .Main .Home-Cont .Home,
+body #root .Main .Home-Cont .Home {
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-html #root .Main .Home .left,
-body #root .Main .Home .left {
-  height: 100%;
+html #root .Main .Home-Cont .Home .left,
+body #root .Main .Home-Cont .Home .left {
+  height: 50%;
   width: 100%;
-  background: url("./images/5.jpeg");
+  background: url("./images/14.jpeg");
   background-size: cover;
-  background-position: top;
+  background-position: center;
   border-bottom: 0.5rem solid var(--sec);
 }
-html #root .Main .Home .right,
-body #root .Main .Home .right {
-  height: 100%;
+html #root .Main .Home-Cont .Home .right,
+body #root .Main .Home-Cont .Home .right {
+  height: 50%;
   width: 100%;
   padding: 2rem;
   position: relative;
 }
-html #root .Main .Home .right .top .name,
-body #root .Main .Home .right .top .name {
+html #root .Main .Home-Cont .Home .right .top .name,
+body #root .Main .Home-Cont .Home .right .top .name {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
 }
-html #root .Main .Home .right .top .name h1,
-body #root .Main .Home .right .top .name h1 {
+html #root .Main .Home-Cont .Home .right .top .name h1,
+body #root .Main .Home-Cont .Home .right .top .name h1 {
   font-family: var(--bebo);
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
 }
-html #root .Main .Home .right .top .name h3,
-body #root .Main .Home .right .top .name h3 {
+html #root .Main .Home-Cont .Home .right .top .name h3,
+body #root .Main .Home-Cont .Home .right .top .name h3 {
   font-family: "curvy";
   font-weight: 100;
   font-size: clamp(2rem, 8vw, 10rem);
@@ -123,8 +130,8 @@ body #root .Main .Home .right .top .name h3 {
   top: 80%;
   right: 20%;
 }
-html #root .Main .Home .right .center,
-body #root .Main .Home .right .center {
+html #root .Main .Home-Cont .Home .right .center,
+body #root .Main .Home-Cont .Home .right .center {
   position: absolute;
   width: 50%;
   top: 50%;
@@ -132,20 +139,165 @@ body #root .Main .Home .right .center {
   border-top: 0.4rem solid var(--sec2);
   padding-top: 1rem;
 }
-html #root .Main .Home .right .center p,
-body #root .Main .Home .right .center p {
+html #root .Main .Home-Cont .Home .right .center p,
+body #root .Main .Home-Cont .Home .right .center p {
+  color: var(--sec2);
   font-size: clamp(0.6rem, 2vw, 2rem);
 }
-html #root .Main .Home .right .bottom button,
-body #root .Main .Home .right .bottom button {
+html #root .Main .Home-Cont .Home .right .bottom,
+body #root .Main .Home-Cont .Home .right .bottom {
+  position: absolute;
+  bottom: 6%;
+  right: 10%;
+}
+html #root .Main .Home-Cont .Home .right .bottom button,
+body #root .Main .Home-Cont .Home .right .bottom button {
   padding-inline: 2rem;
   padding-block: 0.8rem;
   color: var(--pri);
   background: var(--sec);
   font-size: clamp(1rem, 4vw, 2rem);
+  border: none;
+}
+html #root .Main .About,
+body #root .Main .About {
+  width: 100%;
+  background: var(--pri);
+  margin-top: 4rem;
+  border-bottom: 0.2rem solid var(--sec);
+  padding-bottom: 2rem;
+}
+html #root .Main .About .first,
+body #root .Main .About .first {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+html #root .Main .About .first h1,
+body #root .Main .About .first h1 {
+  font-family: var(--bebo);
+  font-size: clamp(3rem, 10vw, 15rem);
+  white-space: nowrap;
+}
+html #root .Main .About .first h3,
+body #root .Main .About .first h3 {
+  font-family: "curvy";
+  font-weight: 100;
+  font-size: clamp(1.4rem, 6vw, 8rem);
   position: absolute;
-  bottom: 6%;
-  right: 10%;
+  top: 90%;
+  left: 80%;
+  rotate: -14deg;
+  white-space: nowrap;
+}
+html #root .Main .About .second,
+body #root .Main .About .second {
+  padding-right: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html #root .Main .About .second .right,
+body #root .Main .About .second .right {
+  width: 100%;
+  height: 60vw;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  z-index: 2;
+  transform: translateY(10%) translateX(-9%) rotate(14deg);
+}
+html #root .Main .About .second .right .img-Cont,
+body #root .Main .About .second .right .img-Cont {
+  width: 50%;
+  height: 100%;
+  background: var(--sec);
+  padding: 1rem;
+}
+html #root .Main .About .second .right .img-Cont img,
+body #root .Main .About .second .right .img-Cont img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html #root .Main .About .second .left,
+body #root .Main .About .second .left {
+  width: 50%;
+  height: 60vw;
+  transform: translateY(-4%) rotate(-8deg) translateX(23%);
+}
+html #root .Main .About .second .left .img-Cont,
+body #root .Main .About .second .left .img-Cont {
+  width: 100%;
+  height: 100%;
+  background: var(--sec);
+  padding: 1rem;
+}
+html #root .Main .About .second .left .img-Cont img,
+body #root .Main .About .second .left .img-Cont img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html #root .Main .About .third,
+body #root .Main .About .third {
+  width: 100%;
+  display: flex;
+  padding-inline: 1rem;
+  gap: 1rem;
+}
+html #root .Main .About .third .left,
+body #root .Main .About .third .left {
+  width: 50%;
+}
+html #root .Main .About .third .left h2,
+body #root .Main .About .third .left h2 {
+  margin-block: 2rem;
+  white-space: nowrap;
+  font-size: clamp(0.8rem, 4vw, 8rem);
+}
+html #root .Main .About .third .left p,
+body #root .Main .About .third .left p {
+  color: var(--sec2);
+  font-size: clamp(0.5rem, 2vw, 2rem);
+}
+html #root .Main .About .third .right,
+body #root .Main .About .third .right {
+  width: 50%;
+}
+html #root .Main .About .third .right h2,
+body #root .Main .About .third .right h2 {
+  margin-block: 2rem;
+  white-space: nowrap;
+  font-size: clamp(0.8rem, 4vw, 8rem);
+}
+html #root .Main .About .third .right p,
+body #root .Main .About .third .right p {
+  color: var(--sec2);
+  font-size: clamp(0.5rem, 2vw, 2rem);
+}
+html #root .Main .About .line,
+body #root .Main .About .line {
+  height: 0.1rem;
+  width: 15rem;
+  background-color: var(--sec2);
+  margin-inline-start: 1rem;
+  margin-block: 2rem;
+}
+html #root .Main .About .journey,
+body #root .Main .About .journey {
+  width: 100%;
+  padding-inline: 1rem;
+}
+html #root .Main .About .journey p,
+body #root .Main .About .journey p {
+  font-size: clamp(0.5rem, 2vw, 2rem);
+  color: var(--sec2);
 }
 
 @media (min-width: 600px) {
@@ -153,26 +305,44 @@ body #root .Main .Home .right .bottom button {
   body #root .Main nav .milestone {
     display: flex;
   }
-  html #root .Main .Home,
-  body #root .Main .Home {
+}
+@media (orientation: landscape) and (max-width: 1000px) {
+  html #root .Main .Home-Cont .Home .left,
+  body #root .Main .Home-Cont .Home .left {
+    flex-shrink: 0;
+  }
+  html #root .Main .Home-Cont .Home .right,
+  body #root .Main .Home-Cont .Home .right {
+    flex-shrink: 0;
+    height: 70%;
+  }
+  html #root .Main .Home-Cont .Home .right .bottom,
+  body #root .Main .Home-Cont .Home .right .bottom {
+    bottom: -4%;
+  }
+  html #root .Main .About,
+  body #root .Main .About {
+    margin-top: 10rem;
+  }
+}
+@media (min-width: 1000px) {
+  html body #root .Main .Home-Cont .Home {
     flex-direction: row;
   }
-  html #root .Main .Home .left,
-  body #root .Main .Home .left {
+  html body #root .Main .Home-Cont .Home .left {
     width: 50%;
+    height: 100%;
     border-right: 0.5rem solid var(--sec);
     border-bottom: 0px;
   }
-  html #root .Main .Home .right,
-  body #root .Main .Home .right {
+  html body #root .Main .Home-Cont .Home .right {
     width: 100%;
+    height: 100%;
   }
-  html #root .Main .Home .right .top .name h1,
-  body #root .Main .Home .right .top .name h1 {
+  html body #root .Main .Home-Cont .Home .right .top .name h1 {
     font-size: clamp(2rem, 8vw, 12rem);
   }
-  html #root .Main .Home .right .bottom button,
-  body #root .Main .Home .right .bottom button {
+  html body #root .Main .Home-Cont .Home .right .bottom {
     bottom: 10%;
   }
 }/*# sourceMappingURL=style.css.map */

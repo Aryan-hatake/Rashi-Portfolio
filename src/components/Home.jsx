@@ -2,6 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
+    <div className="Home-Cont">
+
     <div className='Home'>
      <div className="left"></div>
      <div className="right">
@@ -20,6 +22,7 @@ const Home = () => {
          </button>
       </div>
      </div>
+    </div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ const Nav = () => {
       <nav>
          <h2>Rashi <span>Asthana</span></h2>   
          <div className="milestone">
-            <span>TEEN INDIA</span>
+            <span>TEEN INDIA FINALIST</span>
             <div className="m-Line"></div>
             <span>2022</span>
          </div>
