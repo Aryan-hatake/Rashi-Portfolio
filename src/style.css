@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bokor&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --pri: rgb(19, 19, 19);
-  --backdrop:rgba(0, 0, 0, 0.801);
+  --backdrop: rgba(0, 0, 0, 0.801);
   --pri2: black;
   --sec: white;
   --sec2: rgb(170, 163, 163);
@@ -315,6 +315,7 @@ body #root .Main .About .journey p {
 }
 html #root .Main .Strength,
 body #root .Main .Strength {
+  border-bottom: 0.2rem solid var(--sec);
   width: 100vw;
   margin-top: 4rem;
   padding-bottom: 3rem;
@@ -357,18 +358,21 @@ html #root .Main .Strength .third,
 body #root .Main .Strength .third {
   width: 100%;
   padding-inline: 2rem;
+}
+html #root .Main .Strength .third .cards,
+body #root .Main .Strength .third .cards {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-html #root .Main .Strength .third .scard,
-body #root .Main .Strength .third .scard {
+html #root .Main .Strength .third .cards .scard,
+body #root .Main .Strength .third .cards .scard {
   display: flex;
   align-items: self-start;
   gap: 0.5rem;
 }
-html #root .Main .Strength .third .scard .tick,
-body #root .Main .Strength .third .scard .tick {
+html #root .Main .Strength .third .cards .scard .tick,
+body #root .Main .Strength .third .cards .scard .tick {
   border: 0.01rem solid var(--sec2);
   padding-inline: clamp(0.2rem, 1vw, 0.6rem);
   font-weight: 100;
@@ -378,24 +382,24 @@ body #root .Main .Strength .third .scard .tick {
   margin-right: 0.5rem;
   border-radius: 50rem;
 }
-html #root .Main .Strength .third .scard .tick i,
-body #root .Main .Strength .third .scard .tick i {
+html #root .Main .Strength .third .cards .scard .tick i,
+body #root .Main .Strength .third .cards .scard .tick i {
   display: inline-block;
   color: var(--sec2);
   transform: scale(1.8) translateY(-2%) translateX(10%);
 }
-html #root .Main .Strength .third .scard p,
-body #root .Main .Strength .third .scard p {
+html #root .Main .Strength .third .cards .scard p,
+body #root .Main .Strength .third .cards .scard p {
   font-size: clamp(0.5rem, 2vw, 1rem);
   color: var(--sec2);
   line-height: clamp(1.4rem, 4vw, 3rem);
 }
-html #root .Main .Strength .third .scard p .head,
-body #root .Main .Strength .third .scard p .head {
+html #root .Main .Strength .third .cards .scard p .head,
+body #root .Main .Strength .third .cards .scard p .head {
   font-weight: 600;
   display: inline-block;
   transform: translateY(8%);
-  font-size: clamp(0.8rem, 3vw, 6rem);
+  font-size: clamp(0.8rem, 2vw, 3rem);
   margin-right: 0.5rem;
 }
 
@@ -456,6 +460,9 @@ body #root .Main .Strength .third .scard p .head {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "first second" "third second";
   }
+  html body #root .Main .About .lower-content {
+    transform: translateY(-10%);
+  }
   html body #root .Main .About .first {
     grid-area: first;
     height: -moz-fit-content;
@@ -472,7 +479,7 @@ body #root .Main .Strength .third .scard p .head {
   }
   html body #root .Main .About .second .right {
     transform: none;
-    height: 45vh;
+    height: 50vh;
     max-height: 500px;
   }
   html body #root .Main .About .second .right .img-Cont {
@@ -481,7 +488,7 @@ body #root .Main .Strength .third .scard p .head {
   }
   html body #root .Main .About .second .left {
     transform: none;
-    height: 45vh;
+    height: 50vh;
     max-height: 500px;
   }
   html body #root .Main .About .second .left .img-Cont {
@@ -491,5 +498,56 @@ body #root .Main .Strength .third .scard p .head {
   html body #root .Main .About .third {
     padding-top: 2rem;
     grid-area: third;
+  }
+  html body #root .Main .Strength {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+  }
+  html body #root .Main .Strength .second-lg {
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+  }
+  html body #root .Main .Strength .second-lg .imgCont:first-child {
+    -o-object-position: right;
+       object-position: right;
+  }
+  html body #root .Main .Strength .second-lg .imgCont {
+    width: 50%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  html body #root .Main .Strength .second-lg .imgCont:nth-child(2) {
+    margin-top: 8rem;
+  }
+  html body #root .Main .Strength .second-lg .imgCont img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  html body #root .Main .Strength .third {
+    width: 50%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-around;
+  }
+  html body #root .Main .Strength .third .first h1 {
+    font-family: var(--bebo);
+    font-size: clamp(3rem, 10vw, 15rem);
+    white-space: nowrap;
+  }
+  html body #root .Main .Strength .third .cards .scard .tick {
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    padding-inline: clamp(0.2rem, 0.5vw, 0.3rem);
+  }
+  html body #root .Main .Strength .third .cards .scard .head {
+    font-size: clamp(0.8rem, 1vw, 2rem);
   }
 }/*# sourceMappingURL=style.css.map */

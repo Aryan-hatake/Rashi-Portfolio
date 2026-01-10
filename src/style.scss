@@ -4,7 +4,7 @@
 
 :root {
     --pri: rgb(19, 19, 19);
-    --backdrop:rgba(0, 0, 0, 0.801);
+    --backdrop: rgba(0, 0, 0, 0.801);
     --pri2: black;
     --sec: white;
     --sec2: rgb(170, 163, 163);
@@ -35,9 +35,9 @@
 
 html,
 body {
- 
+
     width: 100%;
-    
+
 
     #root {
         height: 100%;
@@ -45,7 +45,7 @@ body {
         display: flex;
         justify-content: center;
         background: #000;
-     
+
         .Main {
             width: 100%;
             max-width: 2600px;
@@ -220,7 +220,7 @@ body {
 
                 .second {
 
-                        max-width:890px;
+                    max-width: 890px;
                     padding-right: 1rem;
                     padding-top: 1rem;
 
@@ -230,7 +230,7 @@ body {
 
                     .right {
                         width: 100%;
-                    
+
                         height: 60vw;
                         max-height: 600px;
                         display: flex;
@@ -255,9 +255,9 @@ body {
 
                     .left {
                         width: 50%;
-                      
+
                         height: 60vw;
-                          max-height: 600px;
+                        max-height: 600px;
                         transform: translateY(-4%) rotate(-8deg) translateX(23%);
 
                         .img-Cont {
@@ -312,101 +312,117 @@ body {
                         }
                     }
                 }
-                .line{
+
+                .line {
                     height: 0.1rem;
                     width: 15rem;
                     background-color: var(--sec2);
                     margin-inline-start: 1rem;
-                    margin-block: 2rem ;
+                    margin-block: 2rem;
 
 
                 }
-                .journey{
+
+                .journey {
                     width: 100%;
                     padding-inline: 1rem;
-                    p{
+
+                    p {
                         font-size: clamp(0.5rem, 2vw, 1rem);
                         color: var(--sec2);
                     }
                 }
             }
-            .Strength{
-               
+
+            .Strength {
+                border-bottom: 0.2rem solid var(--sec);
                 width: 100vw;
                 margin-top: 4rem;
                 padding-bottom: 3rem;
 
-                .first{
-                       width: fit-content;
-                       position: relative;
+                .first {
+                    width: fit-content;
+                    position: relative;
                     padding-left: 2rem;
                     padding-top: 2rem;
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
                     align-items: center;
-                    h1{
+
+                    h1 {
                         @include h1;
                     }
-                    h3{
+
+                    h3 {
                         height: 0.2rem;
                         width: 60%;
                         background: var(--sec2);
                     }
                 }
-                .second-sm{
+
+                .second-sm {
                     height: 50vw;
                     width: 100%;
-                    .Cylinder{
+
+                    .Cylinder {
                         height: 100%;
                         width: 100%;
                     }
                 }
-                .third{
+
+                .third {
                     width: 100%;
                     padding-inline: 2rem;
+
+                    .cards{
+
+                    
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
-                    .scard{
+
+                    .scard {
                         display: flex;
                         align-items: self-start;
                         gap: 0.5rem;
-                         .tick{
+
+                        .tick {
                             border: 0.01rem solid var(--sec2);
-                          
-                            padding-inline: clamp(0.2rem,1vw,0.6rem);
+
+                            padding-inline: clamp(0.2rem, 1vw, 0.6rem);
                             font-weight: 100;
-                           display: inline-block;
-                           transform: translateY(8%);
-                           font-size: clamp(0.8rem, 5vw, 2rem);
-                           margin-right: 0.5rem;
-                           border-radius: 50rem;
-
-                           i{
                             display: inline-block;
+                            transform: translateY(8%);
+                            font-size: clamp(0.8rem, 5vw, 2rem);
+                            margin-right: 0.5rem;
+                            border-radius: 50rem;
+
+                            i {
+                                display: inline-block;
+                                color: var(--sec2);
+                                transform: scale(1.8) translateY(-2%) translateX(10%);
+                            }
+                        }
+
+                        p {
+                            font-size: clamp(0.5rem, 2vw, 1rem);
                             color: var(--sec2);
-                            transform: scale(1.8) translateY(-2%) translateX(10%);
-                           }
-                        }
+                            line-height: clamp(1.4rem, 4vw, 3rem);
 
-                       p{
-                             font-size: clamp(0.5rem, 2vw, 1rem);
-                        color: var(--sec2);
-                        line-height: clamp(1.4rem,4vw,3rem);
 
-                       
-                        .head{
-                           font-weight: 600;
-                           display: inline-block;
-                           transform: translateY(8%);
-                           font-size: clamp(0.8rem, 3vw, 6rem);
-                           margin-right: 0.5rem;
+                            .head {
+                                font-weight: 600;
+                                display: inline-block;
+                                transform: translateY(8%);
+                                font-size: clamp(0.8rem, 2vw, 3rem);
+                                margin-right: 0.5rem;
+                            }
                         }
-                       }
                     }
                 }
                 }
+            }
         }
     }
 }
@@ -439,7 +455,8 @@ body {
         #root {
             .Main {
                 .Home-Cont {
-                      border-bottom: 0;
+                    border-bottom: 0;
+
                     .Home {
 
                         .left {
@@ -449,7 +466,7 @@ body {
                         .right {
                             flex-shrink: 0;
                             height: 70%;
-                           
+
 
                             .bottom {
                                 bottom: -4%;
@@ -460,7 +477,7 @@ body {
 
                 .About {
                     margin-top: 10rem;
-                   
+
                 }
             }
         }
@@ -510,55 +527,129 @@ body {
                             }
                         }
                     }
-                    .About{
-                         
+
+                    .About {
+
                         display: grid;
                         margin: 0;
                         padding: 0;
-                        grid-template-rows:auto  auto;
-                        grid-template-columns:2fr 1fr;
+                        grid-template-rows: auto auto;
+                        grid-template-columns: 2fr 1fr;
                         grid-template-areas: "first second"
-                                              "third second"
-                                              
-                                               ;
-                        
+                            "third second"
 
-                        .first{
-                            grid-area:first ;
+                        ;
+                        .lower-content{
+                            transform: translateY(-10%);
+                        }
+
+                        .first {
+                            grid-area: first;
                             height: fit-content;
                             width: fit-content;
-                            h3{
+
+                            h3 {
                                 top: 72%;
                             }
                         }
-                         .second{
 
-                             grid-area:second ;
-                             padding: 0;
-                        .right{
-                              transform: none;
-                              height: 45vh;
-                               max-height: 500px;
-                              
-                              .img-Cont{
-                                height: 100%;
-                                padding: 0;
-                              }
-                        }
-                        .left{
-                            transform: none;
-                              height: 45vh;
-                               max-height: 500px;
-                            .img-Cont{
-                                height: 100%;
-                                padding: 0;
+                        .second {
+
+                            grid-area: second;
+                            padding: 0;
+
+                            .right {
+                                transform: none;
+                                height: 50vh;
+                                max-height: 500px;
+
+                                .img-Cont {
+                                    height: 100%;
+                                    padding: 0;
+                                }
+                            }
+
+                            .left {
+                                transform: none;
+                                height: 50vh;
+                                max-height: 500px;
+
+                                .img-Cont {
+                                    height: 100%;
+                                    padding: 0;
+                                }
                             }
                         }
+
+                        .third {
+                            padding-top: 2rem;
+                            grid-area: third;
+                        }
                     }
-                    .third{
-                        padding-top: 2rem;
-                         grid-area:third ;
-                    }
+
+                    .Strength {
+                        margin: 0;
+                        display: flex;
+                          width: 100%;
+                          gap: 2rem;
+                        .second-lg {
+                            width: 50%;
+                            display: flex;
+                            gap: 1rem;
+                            
+                            
+                            .imgCont:first-child{
+                                object-position: right;
+                            }
+                        
+                            .imgCont{
+                                width: 50%;
+                                height: fit-content;
+
+                          &:nth-child(2){
+                           margin-top: 8rem;
+                          }
+
+                                img{
+                                     width: 100%;
+                                     aspect-ratio: 9/16;
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                            }
+                        }
+
+                        .third {
+                            width: 50%;
+                            padding-top: 4rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4rem;
+                            justify-content: space-around;
+                            .first {
+                                h1 {
+                                    font-family: var(--bebo);
+
+                                    font-size: clamp(3rem, 10vw, 15rem);
+                                    white-space: nowrap;
+                                }
+
+                            }
+                            .cards{
+
+                            
+                            .scard{
+  
+                               .tick{
+                                font-size: clamp(0.8rem, 1vw, 2rem);
+                                 padding-inline: clamp(0.2rem, 0.5vw, 0.3rem);
+                               }
+                                 .head{
+                                    font-size: clamp(0.8rem, 1vw, 2rem);
+                                 }
+                            } 
+                        }
+                        }
                     }
                 }
             }
