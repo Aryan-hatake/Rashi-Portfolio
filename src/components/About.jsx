@@ -19,6 +19,8 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="lower-content">
+
       <div className="third">
         <div className="left">
           <h2>About me</h2>
@@ -32,6 +34,7 @@ const About = () => {
       <div className="line"></div>
       <div className="journey">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eius deserunt nulla consequatur rem. Nemo molestiae voluptas possimus corrupti enim cupiditate quaerat laudantium. Error voluptates iure pariatur molestias velit, voluptatibus quisquam quia dicta. Laborum impedit, ea magnam in necessitatibus architecto magni aperiam temporibus soluta asperiores ipsa eum sunt minus ducimus iusto eius odio assumenda deserunt. Quas ea voluptatibus ipsam repudiandae.</p>
+      </div>
       </div>
     </div>
   )

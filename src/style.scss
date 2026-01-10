@@ -4,6 +4,7 @@
 
 :root {
     --pri: rgb(19, 19, 19);
+    --backdrop:rgba(0, 0, 0, 0.801);
     --pri2: black;
     --sec: white;
     --sec2: rgb(170, 163, 163);
@@ -34,24 +35,30 @@
 
 html,
 body {
-    height: 100%;
+ 
     width: 100%;
-    background: var(--pri);
+    
 
     #root {
         height: 100%;
         width: 100%;
-
+        display: flex;
+        justify-content: center;
+        background: #000;
+     
         .Main {
             width: 100%;
+            max-width: 2600px;
             position: relative;
+            background: var(--pri);
 
             nav {
-                background: var(--pri2);
+                background: var(--backdrop);
                 display: flex;
                 width: 100%;
                 position: sticky;
-                top: 0;
+                backdrop-filter: blur(7px);
+                top: -1px;
                 z-index: 5;
                 padding-inline: 4rem;
                 padding-block: 1rem;
@@ -97,6 +104,7 @@ body {
 
                 .Home {
                     height: 100vh;
+                    max-height: 1000px;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -178,7 +186,9 @@ body {
             }
 
             .About {
-                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
                 background: var(--pri);
                 margin-top: 4rem;
@@ -187,6 +197,7 @@ body {
 
                 .first {
                     position: relative;
+                    align-self: self-start;
                     width: fit-content;
                     padding-left: 2rem;
                     padding-top: 2rem;
@@ -198,7 +209,7 @@ body {
                     h3 {
                         font-family: "curvy";
                         font-weight: 100;
-                        font-size: clamp(1.4rem, 6vw, 8rem);
+                        font-size: clamp(1.4rem, 4vw, 6rem);
                         position: absolute;
                         top: 90%;
                         left: 80%;
@@ -209,7 +220,7 @@ body {
 
                 .second {
 
-
+                        max-width:890px;
                     padding-right: 1rem;
                     padding-top: 1rem;
 
@@ -219,7 +230,9 @@ body {
 
                     .right {
                         width: 100%;
+                    
                         height: 60vw;
+                        max-height: 600px;
                         display: flex;
                         justify-content: end;
                         position: relative;
@@ -242,7 +255,9 @@ body {
 
                     .left {
                         width: 50%;
+                      
                         height: 60vw;
+                          max-height: 600px;
                         transform: translateY(-4%) rotate(-8deg) translateX(23%);
 
                         .img-Cont {
@@ -272,12 +287,12 @@ body {
                         h2 {
                             margin-block: 2rem;
                             white-space: nowrap;
-                            font-size: clamp(0.8rem, 4vw, 8rem);
+                            font-size: clamp(0.8rem, 2vw, 3rem);
                         }
 
                         p {
                             color: var(--sec2);
-                            font-size: clamp(0.5rem, 2vw, 2rem);
+                            font-size: clamp(0.5rem, 2vw, 1rem);
 
                         }
                     }
@@ -288,12 +303,12 @@ body {
                         h2 {
                             margin-block: 2rem;
                             white-space: nowrap;
-                            font-size: clamp(0.8rem, 4vw, 8rem);
+                            font-size: clamp(0.8rem, 2vw, 3rem);
                         }
 
                         p {
                             color: var(--sec2);
-                            font-size: clamp(0.5rem, 2vw, 2rem);
+                            font-size: clamp(0.5rem, 2vw, 1rem);
                         }
                     }
                 }
@@ -310,11 +325,88 @@ body {
                     width: 100%;
                     padding-inline: 1rem;
                     p{
-                        font-size: clamp(0.5rem, 2vw, 2rem);
+                        font-size: clamp(0.5rem, 2vw, 1rem);
                         color: var(--sec2);
                     }
                 }
             }
+            .Strength{
+               
+                width: 100vw;
+                margin-top: 4rem;
+                padding-bottom: 3rem;
+
+                .first{
+                       width: fit-content;
+                       position: relative;
+                    padding-left: 2rem;
+                    padding-top: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    align-items: center;
+                    h1{
+                        @include h1;
+                    }
+                    h3{
+                        height: 0.2rem;
+                        width: 60%;
+                        background: var(--sec2);
+                    }
+                }
+                .second-sm{
+                    height: 50vw;
+                    width: 100%;
+                    .Cylinder{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .third{
+                    width: 100%;
+                    padding-inline: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    .scard{
+                        display: flex;
+                        align-items: self-start;
+                        gap: 0.5rem;
+                         .tick{
+                            border: 0.01rem solid var(--sec2);
+                          
+                            padding-inline: clamp(0.2rem,1vw,0.6rem);
+                            font-weight: 100;
+                           display: inline-block;
+                           transform: translateY(8%);
+                           font-size: clamp(0.8rem, 5vw, 2rem);
+                           margin-right: 0.5rem;
+                           border-radius: 50rem;
+
+                           i{
+                            display: inline-block;
+                            color: var(--sec2);
+                            transform: scale(1.8) translateY(-2%) translateX(10%);
+                           }
+                        }
+
+                       p{
+                             font-size: clamp(0.5rem, 2vw, 1rem);
+                        color: var(--sec2);
+                        line-height: clamp(1.4rem,4vw,3rem);
+
+                       
+                        .head{
+                           font-weight: 600;
+                           display: inline-block;
+                           transform: translateY(8%);
+                           font-size: clamp(0.8rem, 3vw, 6rem);
+                           margin-right: 0.5rem;
+                        }
+                       }
+                    }
+                }
+                }
         }
     }
 }
@@ -347,7 +439,7 @@ body {
         #root {
             .Main {
                 .Home-Cont {
-
+                      border-bottom: 0;
                     .Home {
 
                         .left {
@@ -357,6 +449,7 @@ body {
                         .right {
                             flex-shrink: 0;
                             height: 70%;
+                           
 
                             .bottom {
                                 bottom: -4%;
@@ -367,13 +460,14 @@ body {
 
                 .About {
                     margin-top: 10rem;
+                   
                 }
             }
         }
     }
 }
 
-@media (min-width:1000px) {
+@media (min-width:1400px) {
     html {
         body {
             #root {
@@ -415,6 +509,56 @@ body {
 
                             }
                         }
+                    }
+                    .About{
+                         
+                        display: grid;
+                        margin: 0;
+                        padding: 0;
+                        grid-template-rows:auto  auto;
+                        grid-template-columns:2fr 1fr;
+                        grid-template-areas: "first second"
+                                              "third second"
+                                              
+                                               ;
+                        
+
+                        .first{
+                            grid-area:first ;
+                            height: fit-content;
+                            width: fit-content;
+                            h3{
+                                top: 72%;
+                            }
+                        }
+                         .second{
+
+                             grid-area:second ;
+                             padding: 0;
+                        .right{
+                              transform: none;
+                              height: 45vh;
+                               max-height: 500px;
+                              
+                              .img-Cont{
+                                height: 100%;
+                                padding: 0;
+                              }
+                        }
+                        .left{
+                            transform: none;
+                              height: 45vh;
+                               max-height: 500px;
+                            .img-Cont{
+                                height: 100%;
+                                padding: 0;
+                            }
+                        }
+                    }
+                    .third{
+                        padding-top: 2rem;
+                         grid-area:third ;
+                    }
                     }
                 }
             }

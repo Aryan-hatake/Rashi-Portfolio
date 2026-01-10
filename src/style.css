@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bokor&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --pri: rgb(19, 19, 19);
+  --backdrop:rgba(0, 0, 0, 0.801);
   --pri2: black;
   --sec: white;
   --sec2: rgb(170, 163, 163);
@@ -21,27 +22,32 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
-  background: var(--pri);
 }
 html #root,
 body #root {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
 }
 html #root .Main,
 body #root .Main {
   width: 100%;
+  max-width: 2600px;
   position: relative;
+  background: var(--pri);
 }
 html #root .Main nav,
 body #root .Main nav {
-  background: var(--pri2);
+  background: var(--backdrop);
   display: flex;
   width: 100%;
   position: sticky;
-  top: 0;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  top: -1px;
   z-index: 5;
   padding-inline: 4rem;
   padding-block: 1rem;
@@ -88,6 +94,7 @@ body #root .Main .Home-Cont {
 html #root .Main .Home-Cont .Home,
 body #root .Main .Home-Cont .Home {
   height: 100vh;
+  max-height: 1000px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -161,6 +168,9 @@ body #root .Main .Home-Cont .Home .right .bottom button {
 }
 html #root .Main .About,
 body #root .Main .About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   background: var(--pri);
   margin-top: 4rem;
@@ -170,6 +180,7 @@ body #root .Main .About {
 html #root .Main .About .first,
 body #root .Main .About .first {
   position: relative;
+  align-self: self-start;
   width: -moz-fit-content;
   width: fit-content;
   padding-left: 2rem;
@@ -185,7 +196,7 @@ html #root .Main .About .first h3,
 body #root .Main .About .first h3 {
   font-family: "curvy";
   font-weight: 100;
-  font-size: clamp(1.4rem, 6vw, 8rem);
+  font-size: clamp(1.4rem, 4vw, 6rem);
   position: absolute;
   top: 90%;
   left: 80%;
@@ -194,6 +205,7 @@ body #root .Main .About .first h3 {
 }
 html #root .Main .About .second,
 body #root .Main .About .second {
+  max-width: 890px;
   padding-right: 1rem;
   padding-top: 1rem;
   width: 100%;
@@ -204,6 +216,7 @@ html #root .Main .About .second .right,
 body #root .Main .About .second .right {
   width: 100%;
   height: 60vw;
+  max-height: 600px;
   display: flex;
   justify-content: end;
   position: relative;
@@ -228,6 +241,7 @@ html #root .Main .About .second .left,
 body #root .Main .About .second .left {
   width: 50%;
   height: 60vw;
+  max-height: 600px;
   transform: translateY(-4%) rotate(-8deg) translateX(23%);
 }
 html #root .Main .About .second .left .img-Cont,
@@ -259,12 +273,12 @@ html #root .Main .About .third .left h2,
 body #root .Main .About .third .left h2 {
   margin-block: 2rem;
   white-space: nowrap;
-  font-size: clamp(0.8rem, 4vw, 8rem);
+  font-size: clamp(0.8rem, 2vw, 3rem);
 }
 html #root .Main .About .third .left p,
 body #root .Main .About .third .left p {
   color: var(--sec2);
-  font-size: clamp(0.5rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 2vw, 1rem);
 }
 html #root .Main .About .third .right,
 body #root .Main .About .third .right {
@@ -274,12 +288,12 @@ html #root .Main .About .third .right h2,
 body #root .Main .About .third .right h2 {
   margin-block: 2rem;
   white-space: nowrap;
-  font-size: clamp(0.8rem, 4vw, 8rem);
+  font-size: clamp(0.8rem, 2vw, 3rem);
 }
 html #root .Main .About .third .right p,
 body #root .Main .About .third .right p {
   color: var(--sec2);
-  font-size: clamp(0.5rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 2vw, 1rem);
 }
 html #root .Main .About .line,
 body #root .Main .About .line {
@@ -296,8 +310,93 @@ body #root .Main .About .journey {
 }
 html #root .Main .About .journey p,
 body #root .Main .About .journey p {
-  font-size: clamp(0.5rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 2vw, 1rem);
   color: var(--sec2);
+}
+html #root .Main .Strength,
+body #root .Main .Strength {
+  width: 100vw;
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+}
+html #root .Main .Strength .first,
+body #root .Main .Strength .first {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+html #root .Main .Strength .first h1,
+body #root .Main .Strength .first h1 {
+  font-family: var(--bebo);
+  font-size: clamp(3rem, 10vw, 15rem);
+  white-space: nowrap;
+}
+html #root .Main .Strength .first h3,
+body #root .Main .Strength .first h3 {
+  height: 0.2rem;
+  width: 60%;
+  background: var(--sec2);
+}
+html #root .Main .Strength .second-sm,
+body #root .Main .Strength .second-sm {
+  height: 50vw;
+  width: 100%;
+}
+html #root .Main .Strength .second-sm .Cylinder,
+body #root .Main .Strength .second-sm .Cylinder {
+  height: 100%;
+  width: 100%;
+}
+html #root .Main .Strength .third,
+body #root .Main .Strength .third {
+  width: 100%;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+html #root .Main .Strength .third .scard,
+body #root .Main .Strength .third .scard {
+  display: flex;
+  align-items: self-start;
+  gap: 0.5rem;
+}
+html #root .Main .Strength .third .scard .tick,
+body #root .Main .Strength .third .scard .tick {
+  border: 0.01rem solid var(--sec2);
+  padding-inline: clamp(0.2rem, 1vw, 0.6rem);
+  font-weight: 100;
+  display: inline-block;
+  transform: translateY(8%);
+  font-size: clamp(0.8rem, 5vw, 2rem);
+  margin-right: 0.5rem;
+  border-radius: 50rem;
+}
+html #root .Main .Strength .third .scard .tick i,
+body #root .Main .Strength .third .scard .tick i {
+  display: inline-block;
+  color: var(--sec2);
+  transform: scale(1.8) translateY(-2%) translateX(10%);
+}
+html #root .Main .Strength .third .scard p,
+body #root .Main .Strength .third .scard p {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  color: var(--sec2);
+  line-height: clamp(1.4rem, 4vw, 3rem);
+}
+html #root .Main .Strength .third .scard p .head,
+body #root .Main .Strength .third .scard p .head {
+  font-weight: 600;
+  display: inline-block;
+  transform: translateY(8%);
+  font-size: clamp(0.8rem, 3vw, 6rem);
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 600px) {
@@ -307,6 +406,10 @@ body #root .Main .About .journey p {
   }
 }
 @media (orientation: landscape) and (max-width: 1000px) {
+  html #root .Main .Home-Cont,
+  body #root .Main .Home-Cont {
+    border-bottom: 0;
+  }
   html #root .Main .Home-Cont .Home .left,
   body #root .Main .Home-Cont .Home .left {
     flex-shrink: 0;
@@ -325,7 +428,7 @@ body #root .Main .About .journey p {
     margin-top: 10rem;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   html body #root .Main .Home-Cont .Home {
     flex-direction: row;
   }
@@ -344,5 +447,49 @@ body #root .Main .About .journey p {
   }
   html body #root .Main .Home-Cont .Home .right .bottom {
     bottom: 10%;
+  }
+  html body #root .Main .About {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "first second" "third second";
+  }
+  html body #root .Main .About .first {
+    grid-area: first;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  html body #root .Main .About .first h3 {
+    top: 72%;
+  }
+  html body #root .Main .About .second {
+    grid-area: second;
+    padding: 0;
+  }
+  html body #root .Main .About .second .right {
+    transform: none;
+    height: 45vh;
+    max-height: 500px;
+  }
+  html body #root .Main .About .second .right .img-Cont {
+    height: 100%;
+    padding: 0;
+  }
+  html body #root .Main .About .second .left {
+    transform: none;
+    height: 45vh;
+    max-height: 500px;
+  }
+  html body #root .Main .About .second .left .img-Cont {
+    height: 100%;
+    padding: 0;
+  }
+  html body #root .Main .About .third {
+    padding-top: 2rem;
+    grid-area: third;
   }
 }/*# sourceMappingURL=style.css.map */
