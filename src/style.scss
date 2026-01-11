@@ -429,7 +429,10 @@ body {
                 margin-top: 4rem;
                 width: 100%;
                 padding: 4rem;
-
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               gap: clamp(6rem,4vw,20rem);
                 .left {
                     width: 100%;
 
@@ -503,6 +506,28 @@ body {
 
                             }
                         }
+                    }
+                }
+                .right{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+                    .story{
+                       width: 60vw;
+                       height: 60vw;
+                       video{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                       }
+                    }
+                    p{
+                         color: var(--sec2);
+                            font-size: clamp(0.5rem, 3vw, 1.3rem);
+                            width: 60vw;
                     }
                 }
             }
@@ -736,6 +761,36 @@ body {
                                         font-size: clamp(0.8rem, 1vw, 2rem);
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .Project{
+                        flex-direction: row;
+                        align-items: center;
+                        .left{
+                            width: 50%;
+                            .project-cont{
+                                .vid-top,.vid-bottom{
+                                    width: clamp(2rem,14vw,24rem);
+                                    height: clamp(2rem,14vw,24rem);
+                                }
+                                .vid-top{
+                                    top: 10%;
+                                }
+                                .vid-bottom{
+                                    bottom: 10%;
+                                }
+                            }
+                        }
+                        .right{
+                            width: 50%;
+                            align-items: center;
+                            .story{
+                                width: clamp(2rem,20vw,34rem);
+                                height: clamp(2rem,20vw,34rem);
+                            }
+                            p{
+                                width: clamp(2rem,20vw,34rem);
                             }
                         }
                     }

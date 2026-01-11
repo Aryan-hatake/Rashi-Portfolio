@@ -20,7 +20,12 @@ const Project = () => {
          </div>
 
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="story">
+          <video autoPlay muted  loop src="/src/videos/3.mp4"></video>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam facilis, ex veniam unde temporibus tempore sequi. Obcaecati aliquid accusamus culpa, ea rem magnam accusantium harum, odio blanditiis in ullam?</p>
+        </div>
       </div>
     </div>
   )

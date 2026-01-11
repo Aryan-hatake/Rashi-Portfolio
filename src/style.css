@@ -407,6 +407,10 @@ body #root .Main .Project {
   margin-top: 4rem;
   width: 100%;
   padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6rem, 4vw, 20rem);
 }
 html #root .Main .Project .left,
 body #root .Main .Project .left {
@@ -484,6 +488,34 @@ body #root .Main .Project .left .project-cont .landscape img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+html #root .Main .Project .right,
+body #root .Main .Project .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+html #root .Main .Project .right .story,
+body #root .Main .Project .right .story {
+  width: 60vw;
+  height: 60vw;
+}
+html #root .Main .Project .right .story video,
+body #root .Main .Project .right .story video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+html #root .Main .Project .right p,
+body #root .Main .Project .right p {
+  color: var(--sec2);
+  font-size: clamp(0.5rem, 3vw, 1.3rem);
+  width: 60vw;
 }
 
 @media (min-width: 600px) {
@@ -632,5 +664,33 @@ body #root .Main .Project .left .project-cont .landscape img {
   }
   html body #root .Main .Strength .third .cards .scard .head {
     font-size: clamp(0.8rem, 1vw, 2rem);
+  }
+  html body #root .Main .Project {
+    flex-direction: row;
+    align-items: center;
+  }
+  html body #root .Main .Project .left {
+    width: 50%;
+  }
+  html body #root .Main .Project .left .project-cont .vid-top, html body #root .Main .Project .left .project-cont .vid-bottom {
+    width: clamp(2rem, 14vw, 24rem);
+    height: clamp(2rem, 14vw, 24rem);
+  }
+  html body #root .Main .Project .left .project-cont .vid-top {
+    top: 10%;
+  }
+  html body #root .Main .Project .left .project-cont .vid-bottom {
+    bottom: 10%;
+  }
+  html body #root .Main .Project .right {
+    width: 50%;
+    align-items: center;
+  }
+  html body #root .Main .Project .right .story {
+    width: clamp(2rem, 20vw, 34rem);
+    height: clamp(2rem, 20vw, 34rem);
+  }
+  html body #root .Main .Project .right p {
+    width: clamp(2rem, 20vw, 34rem);
   }
 }/*# sourceMappingURL=style.css.map */
