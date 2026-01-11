@@ -402,6 +402,89 @@ body #root .Main .Strength .third .cards .scard p .head {
   font-size: clamp(0.8rem, 2vw, 3rem);
   margin-right: 0.5rem;
 }
+html #root .Main .Project,
+body #root .Main .Project {
+  margin-top: 4rem;
+  width: 100%;
+  padding: 4rem;
+}
+html #root .Main .Project .left,
+body #root .Main .Project .left {
+  width: 100%;
+}
+html #root .Main .Project .left .project-cont,
+body #root .Main .Project .left .project-cont {
+  width: 100%;
+  position: relative;
+}
+html #root .Main .Project .left .project-cont .vid-top,
+body #root .Main .Project .left .project-cont .vid-top {
+  right: 8%;
+  top: 4%;
+  padding: 0.2rem;
+  background: var(--sec);
+}
+html #root .Main .Project .left .project-cont .vid-bottom,
+body #root .Main .Project .left .project-cont .vid-bottom {
+  left: 5%;
+  bottom: 0%;
+  padding: 0.2rem;
+  background: var(--sec);
+}
+html #root .Main .Project .left .project-cont .vid-bottom video,
+body #root .Main .Project .left .project-cont .vid-bottom video {
+  -o-object-position: top;
+     object-position: top;
+}
+html #root .Main .Project .left .project-cont h2:last-child,
+body #root .Main .Project .left .project-cont h2:last-child {
+  position: relative;
+  left: clamp(5.6rem, 44%, 58rem);
+  font-family: var(--bebo);
+  font-size: clamp(3rem, 10vw, 15rem);
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: var(--bebo);
+  font-size: clamp(2rem, 10vw, 15rem);
+  white-space: nowrap;
+}
+html #root .Main .Project .left .project-cont h2:first-child,
+body #root .Main .Project .left .project-cont h2:first-child {
+  font-family: var(--bebo);
+  font-size: clamp(2rem, 10vw, 15rem);
+  white-space: nowrap;
+}
+html #root .Main .Project .left .project-cont .vid-top,
+html #root .Main .Project .left .project-cont .vid-bottom,
+body #root .Main .Project .left .project-cont .vid-top,
+body #root .Main .Project .left .project-cont .vid-bottom {
+  width: 24vw;
+  height: 24vw;
+  position: absolute;
+}
+html #root .Main .Project .left .project-cont .vid-top video,
+html #root .Main .Project .left .project-cont .vid-bottom video,
+body #root .Main .Project .left .project-cont .vid-top video,
+body #root .Main .Project .left .project-cont .vid-bottom video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+html #root .Main .Project .left .project-cont .landscape,
+body #root .Main .Project .left .project-cont .landscape {
+  aspect-ratio: 16/9;
+  height: 40%;
+  width: 100%;
+}
+html #root .Main .Project .left .project-cont .landscape img,
+body #root .Main .Project .left .project-cont .landscape img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 @media (min-width: 600px) {
   html #root .Main nav .milestone,

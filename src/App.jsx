@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import './style.css'
 import About from './components/About'
 import Strength from './components/Strength'
+import Project from './components/Project'
 
 
 
@@ -14,6 +15,7 @@ const App = () => {
       <Home/>
       <About/>
       <Strength/>
+      <Project/>
     </div>
   )
 }
