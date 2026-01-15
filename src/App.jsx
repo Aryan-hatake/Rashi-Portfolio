@@ -6,6 +6,8 @@ import About from './components/About'
 import Strength from './components/Strength'
 import Project from './components/Project'
 import Services from './components/Services'
+import LetsWork from './components/LetsWork'
+
 
 
 const App = () => {
@@ -17,6 +19,7 @@ const App = () => {
       <Strength/>
       <Project/>
       <Services/>
+      <LetsWork/>
     </div>
   )
 }

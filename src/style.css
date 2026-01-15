@@ -626,7 +626,61 @@ body #root .Main .Services .bottom .serv-list .serv p span {
   transform: translateY(8%);
   font-size: clamp(0.8rem, 2vw, 2rem);
   white-space: nowrap;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+}
+html #root .Main .work,
+body #root .Main .work {
+  width: 100%;
+  padding: 4rem;
+}
+html #root .Main .work .left,
+body #root .Main .work .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+html #root .Main .work .left .head h2,
+body #root .Main .work .left .head h2 {
+  font-family: var(--bebo);
+  font-size: clamp(3rem, 10vw, 15rem);
+  white-space: nowrap;
+  font-size: clamp(3rem, 20vw, 20rem);
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  line-height: clamp(3rem, 17vw, 18rem);
+}
+html #root .Main .work .left .head h2 span,
+body #root .Main .work .left .head h2 span {
+  font-family: Curvy;
+  font-weight: 100;
+  position: absolute;
+  transform: translateX(20%);
+  font-size: clamp(3rem, 10vw, 18rem);
+}
+html #root .Main .work .left .socials,
+body #root .Main .work .left .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+html #root .Main .work .left .socials .handle,
+body #root .Main .work .left .socials .handle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+html #root .Main .work .left .socials .handle span,
+body #root .Main .work .left .socials .handle span {
+  font-size: clamp(1rem, 2vw, 4rem);
+  display: flex;
+  align-items: center;
+}
+html #root .Main .work .left .socials .handle span svg,
+body #root .Main .work .left .socials .handle span svg {
+  width: clamp(1rem, 2vw, 4rem);
+  height: clamp(1rem, 2vw, 4rem);
 }
 
 @media (min-width: 600px) {
@@ -835,5 +889,8 @@ body #root .Main .Services .bottom .serv-list .serv p span {
     align-items: self-start;
     justify-content: space-around;
     margin-right: 2rem;
+  }
+  html body #root .Main .work .left {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
