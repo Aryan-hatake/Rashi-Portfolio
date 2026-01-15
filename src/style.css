@@ -408,6 +408,7 @@ body #root .Main .Project {
   width: 100%;
   padding: 4rem;
   display: flex;
+  border-bottom: 0.2rem solid var(--sec);
   flex-direction: column;
   align-items: center;
   gap: clamp(6rem, 4vw, 20rem);
@@ -516,6 +517,116 @@ body #root .Main .Project .right p {
   color: var(--sec2);
   font-size: clamp(0.5rem, 3vw, 1.3rem);
   width: 60vw;
+}
+html #root .Main .Services,
+body #root .Main .Services {
+  width: 100%;
+}
+html #root .Main .Services .top,
+body #root .Main .Services .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6rem;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--sec2);
+  padding-bottom: 2rem;
+}
+html #root .Main .Services .top .vidT,
+body #root .Main .Services .top .vidT {
+  width: 60vw;
+  height: 60vw;
+  padding: 0.2rem;
+  background: var(--sec);
+}
+html #root .Main .Services .top .vidT video,
+body #root .Main .Services .top .vidT video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+html #root .Main .Services .top .head,
+body #root .Main .Services .top .head {
+  position: relative;
+  align-self: self-start;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+html #root .Main .Services .top .head h2,
+body #root .Main .Services .top .head h2 {
+  font-family: var(--bebo);
+  font-size: clamp(3rem, 10vw, 15rem);
+  white-space: nowrap;
+}
+html #root .Main .Services .top .head h3,
+body #root .Main .Services .top .head h3 {
+  font-family: "curvy";
+  font-weight: 100;
+  font-size: clamp(1.4rem, 4vw, 6rem);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  color: var(--sec2);
+  white-space: nowrap;
+}
+html #root .Main .Services .bottom,
+body #root .Main .Services .bottom {
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--sec2);
+}
+html #root .Main .Services .bottom .vidB,
+body #root .Main .Services .bottom .vidB {
+  width: 60vw;
+  height: 60vw;
+  padding: 0.2rem;
+  background: var(--sec);
+}
+html #root .Main .Services .bottom .vidB video,
+body #root .Main .Services .bottom .vidB video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+html #root .Main .Services .bottom .serv-list,
+body #root .Main .Services .bottom .serv-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+html #root .Main .Services .bottom .serv-list .serv,
+body #root .Main .Services .bottom .serv-list .serv {
+  width: 50%;
+}
+html #root .Main .Services .bottom .serv-list .serv p,
+body #root .Main .Services .bottom .serv-list .serv p {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  color: var(--sec2);
+  line-height: clamp(1.3rem, 2.2vw, 3rem);
+}
+html #root .Main .Services .bottom .serv-list .serv p span,
+body #root .Main .Services .bottom .serv-list .serv p span {
+  font-weight: 600;
+  display: inline-block;
+  transform: translateY(8%);
+  font-size: clamp(0.8rem, 2vw, 2rem);
+  white-space: nowrap;
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 600px) {
@@ -672,7 +783,8 @@ body #root .Main .Project .right p {
   html body #root .Main .Project .left {
     width: 50%;
   }
-  html body #root .Main .Project .left .project-cont .vid-top, html body #root .Main .Project .left .project-cont .vid-bottom {
+  html body #root .Main .Project .left .project-cont .vid-top,
+  html body #root .Main .Project .left .project-cont .vid-bottom {
     width: clamp(2rem, 14vw, 24rem);
     height: clamp(2rem, 14vw, 24rem);
   }
@@ -692,5 +804,36 @@ body #root .Main .Project .right p {
   }
   html body #root .Main .Project .right p {
     width: clamp(2rem, 20vw, 34rem);
+  }
+  html body #root .Main .Services {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  html body #root .Main .Services .top {
+    flex-direction: row;
+    justify-content: center;
+  }
+  html body #root .Main .Services .top .vidT {
+    transform: translateY(-2px);
+    position: relative;
+    z-index: 3;
+    height: 30vw;
+    width: 30vw;
+  }
+  html body #root .Main .Services .bottom {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 0.001rem;
+  }
+  html body #root .Main .Services .bottom .vidB {
+    height: 30vw;
+    width: 30vw;
+  }
+  html body #root .Main .Services .bottom .serv-list {
+    width: 60%;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: space-around;
+    margin-right: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

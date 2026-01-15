@@ -5,7 +5,7 @@ import './style.css'
 import About from './components/About'
 import Strength from './components/Strength'
 import Project from './components/Project'
-
+import Services from './components/Services'
 
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
       <About/>
       <Strength/>
       <Project/>
+      <Services/>
     </div>
   )
 }

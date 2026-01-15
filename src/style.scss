@@ -366,7 +366,7 @@ body {
                     width: 100%;
 
                     .Cylinder {
-                       
+
                         height: 100%;
                         width: 100%;
                     }
@@ -429,10 +429,12 @@ body {
                 margin-top: 4rem;
                 width: 100%;
                 padding: 4rem;
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               gap: clamp(6rem,4vw,20rem);
+                display: flex;
+                border-bottom: 0.2rem solid var(--sec);
+                flex-direction: column;
+                align-items: center;
+                gap: clamp(6rem, 4vw, 20rem);
+
                 .left {
                     width: 100%;
 
@@ -464,7 +466,7 @@ body {
                             left: clamp(5.6rem, 44%, 58rem);
                             @include h1;
                             width: fit-content;
-                                   font-family: var(--bebo);
+                            font-family: var(--bebo);
 
                             font-size: clamp(2rem, 10vw, 15rem);
                             white-space: nowrap;
@@ -508,26 +510,135 @@ body {
                         }
                     }
                 }
-                .right{
+
+                .right {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     gap: 2rem;
-                    .story{
-                       width: 60vw;
-                       height: 60vw;
-                       video{
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                        object-position: center;
-                       }
+
+                    .story {
+                        width: 60vw;
+                        height: 60vw;
+
+                        video {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
                     }
-                    p{
-                         color: var(--sec2);
-                            font-size: clamp(0.5rem, 3vw, 1.3rem);
-                            width: 60vw;
+
+                    p {
+                        color: var(--sec2);
+                        font-size: clamp(0.5rem, 3vw, 1.3rem);
+                        width: 60vw;
+                    }
+                }
+            }
+
+            .Services {
+
+                width: 100%;
+
+                .top {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    gap: 6rem;
+                    align-items: center;
+                    border-bottom: 0.1rem solid var(--sec2);
+                    padding-bottom: 2rem;
+
+                    .vidT {
+                        width: 60vw;
+                        height: 60vw;
+                        padding: 0.2rem;
+                        background: var(--sec);
+
+                        video {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .head {
+                        position: relative;
+                        align-self: self-start;
+                        width: fit-content;
+                        padding-left: 2rem;
+                        padding-top: 2rem;
+
+                        h2 {
+                            @include h1;
+
+                        }
+
+                        h3 {
+                            font-family: "curvy";
+                            font-weight: 100;
+                            font-size: clamp(1.4rem, 4vw, 6rem);
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            color: var(--sec2);
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    display: flex;
+                    padding-bottom: 1rem;
+                    margin-top: 2rem;
+                    flex-direction: column-reverse;
+                    gap: 3rem;
+                    align-items: center;
+                    border-bottom: 0.1rem solid var(--sec2);
+                
+
+                    .vidB {
+
+                        width: 60vw;
+                        height: 60vw;
+                        padding: 0.2rem;
+                        background: var(--sec);
+
+                        video {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                    .serv-list{
+                    width: 100%;
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                     gap: 2rem;
+                    .serv{
+                        width: 50%;
+                       p {
+                                font-size: clamp(0.5rem, 2vw, 1rem);
+                                color: var(--sec2);
+                                line-height: clamp(1.3rem, 2.2vw, 3rem);
+
+
+                            span {
+                                    font-weight: 600;
+                                    display: inline-block;
+                                    transform: translateY(8%);
+                                    font-size: clamp(0.8rem, 2vw, 2rem);
+                                    white-space: nowrap;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                    }
                     }
                 }
             }
@@ -764,33 +875,77 @@ body {
                             }
                         }
                     }
-                    .Project{
+
+                    .Project {
                         flex-direction: row;
                         align-items: center;
-                        .left{
+
+                        .left {
                             width: 50%;
-                            .project-cont{
-                                .vid-top,.vid-bottom{
-                                    width: clamp(2rem,14vw,24rem);
-                                    height: clamp(2rem,14vw,24rem);
+
+                            .project-cont {
+
+                                .vid-top,
+                                .vid-bottom {
+                                    width: clamp(2rem, 14vw, 24rem);
+                                    height: clamp(2rem, 14vw, 24rem);
                                 }
-                                .vid-top{
+
+                                .vid-top {
                                     top: 10%;
                                 }
-                                .vid-bottom{
+
+                                .vid-bottom {
                                     bottom: 10%;
                                 }
                             }
                         }
-                        .right{
+
+                        .right {
                             width: 50%;
                             align-items: center;
-                            .story{
-                                width: clamp(2rem,20vw,34rem);
-                                height: clamp(2rem,20vw,34rem);
+
+                            .story {
+                                width: clamp(2rem, 20vw, 34rem);
+                                height: clamp(2rem, 20vw, 34rem);
                             }
-                            p{
-                                width: clamp(2rem,20vw,34rem);
+
+                            p {
+                                width: clamp(2rem, 20vw, 34rem);
+                            }
+                        }
+                    }
+                    .Services{
+                        display: flex;
+                        flex-direction: column-reverse;
+                       
+                        .top{
+                            flex-direction: row;
+                             justify-content: center;
+                    
+                            .vidT{
+                                 transform: translateY(-2px);
+                                 position: relative;
+                                 z-index: 3;
+                                height: 30vw;
+                                width: 30vw;
+                            }
+                        }
+                        .bottom{
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            padding-bottom: 0.001rem;
+                            .vidB{
+                                height: 30vw;
+                                width: 30vw;
+                               
+                            }
+                            .serv-list{
+                                width: 60%;
+                                flex-direction: row;
+                                align-items: self-start; 
+                                justify-content: space-around;
+                                margin-right: 2rem;
                             }
                         }
                     }
