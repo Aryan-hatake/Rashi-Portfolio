@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: Curvy;
-  src: url(./assets/Gistesy.ttf);
+  src: url(/public/assets/Gistesy.ttf);
 }
 * {
   margin: 0;

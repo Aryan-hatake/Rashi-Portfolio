@@ -5,7 +5,7 @@ import * as THREE from "three"
 import { useFrame } from '@react-three/fiber';
 
 const Model = () => {
-    let tex = useTexture("/src/assets/RashiBanner.png")
+    let tex = useTexture("/public/assets/RashiBanner.png")
     
     let cyl = useRef();
     useFrame((state,delta)=>{
