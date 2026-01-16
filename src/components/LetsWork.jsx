@@ -39,3 +39,14 @@ const LetsWork = () => {
 }
 
 export default LetsWork
+// import Spline from '@splinetool/react-spline/next';
+
+// export default function Home() {
+//   return (
+//     <main>
+//       <Spline
+//         scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" 
+//       />
+//     </main>
+//   );
+// }

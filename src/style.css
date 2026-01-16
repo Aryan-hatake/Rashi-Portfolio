@@ -520,6 +520,7 @@ body #root .Main .Project .right p {
 }
 html #root .Main .Services,
 body #root .Main .Services {
+  border-bottom: 0.2rem solid var(--sec);
   width: 100%;
 }
 html #root .Main .Services .top,
@@ -632,6 +633,7 @@ html #root .Main .work,
 body #root .Main .work {
   width: 100%;
   padding: 4rem;
+  overflow-x: hidden;
 }
 html #root .Main .work .left,
 body #root .Main .work .left {
@@ -681,6 +683,14 @@ html #root .Main .work .left .socials .handle span svg,
 body #root .Main .work .left .socials .handle span svg {
   width: clamp(1rem, 2vw, 4rem);
   height: clamp(1rem, 2vw, 4rem);
+}
+html #root .Main .work .right,
+body #root .Main .work .right {
+  width: 100vw;
+}
+html #root .Main .work .right div,
+body #root .Main .work .right div {
+  transform: translateX(-18%);
 }
 
 @media (min-width: 600px) {
@@ -871,8 +881,8 @@ body #root .Main .work .left .socials .handle span svg {
     transform: translateY(-2px);
     position: relative;
     z-index: 3;
-    height: 30vw;
-    width: 30vw;
+    height: clamp(4rem, 30vw, 30rem);
+    width: clamp(4rem, 30vw, 30rem);
   }
   html body #root .Main .Services .bottom {
     flex-direction: row;
@@ -890,7 +900,18 @@ body #root .Main .work .left .socials .handle span svg {
     justify-content: space-around;
     margin-right: 2rem;
   }
+  html body #root .Main .work {
+    overflow-x: hidden;
+    display: flex;
+  }
   html body #root .Main .work .left {
     width: 50%;
+  }
+  html body #root .Main .work .right {
+    flex-shrink: 0;
+    width: 65%;
+  }
+  html body #root .Main .work .right div {
+    transform: translateX(0%) translateY(-10%);
   }
 }/*# sourceMappingURL=style.css.map */
