@@ -10,12 +10,12 @@ const About = () => {
       <div className="second">
         <div className="right">
           <div className="img-Cont">
-            <img src="public/images/9.jpeg" alt="" />
+            <img src="/images/9.jpeg" alt="" />
           </div>
         </div>
         <div className="left">
             <div className="img-Cont">
-            <img src="public/images/10.jpeg" alt="" />
+            <img src="/images/10.jpeg" alt="" />
           </div>
         </div>
       </div>
