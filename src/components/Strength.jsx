@@ -10,10 +10,10 @@ const Strength = () => {
     <div className='Strength'>
      { !isSmallScreen && <div className="second-lg">
         <div className="imgCont">
-          <img src="/public/images/4.jpeg" alt="" />
+          <img src="public/images/4.jpeg" alt="" />
         </div>
         <div className="imgCont">
-            <img src="/public/images/2.jpeg" alt="" />
+            <img src="public/images/2.jpeg" alt="" />
         </div>
       </div>}
 
