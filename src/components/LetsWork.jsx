@@ -30,7 +30,7 @@ const LetsWork = () => {
         </div>
       </div>
       <div className="right">
-      <Spline
+     <Spline
         scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" 
       />
       </div>

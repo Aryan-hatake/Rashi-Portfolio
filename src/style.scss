@@ -691,11 +691,11 @@ body {
                   }
                 }
                 .right{
-                    width: 100vw;
+                    width: clamp(50rem,100vw,100rem);
                   
                   
                     div{
-                        transform: translateX(-18%);
+                        transform: translateX(-32%);
                     }
                 }
             }

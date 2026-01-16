@@ -104,7 +104,7 @@ html #root .Main .Home-Cont .Home .left,
 body #root .Main .Home-Cont .Home .left {
   height: 50%;
   width: 100%;
-  background: url("/images/14.jpeg");
+  background: url("./images/14.jpeg");
   background-size: cover;
   background-position: center;
   border-bottom: 0.5rem solid var(--sec);
@@ -686,11 +686,11 @@ body #root .Main .work .left .socials .handle span svg {
 }
 html #root .Main .work .right,
 body #root .Main .work .right {
-  width: 100vw;
+  width: clamp(50rem, 100vw, 100rem);
 }
 html #root .Main .work .right div,
 body #root .Main .work .right div {
-  transform: translateX(-18%);
+  transform: translateX(-32%);
 }
 
 @media (min-width: 600px) {
