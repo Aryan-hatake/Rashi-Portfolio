@@ -1,5 +1,6 @@
 import React from 'react'
-import './style.css'
+import { useEffect } from 'react'
+
 const About = React.lazy(() => import('./components/About'))
 const Home = React.lazy(() => import('./components/Home'))
 const Nav= React.lazy(() => import('./components/Nav'))
@@ -11,8 +12,10 @@ const LetsWork = React.lazy(() => import('./components/LetsWork'))
 
 
 
-
 const App = () => {
+  useEffect(() => {
+    import('./style.css');
+  }, []);
   return (
     <div className='Main'>
       <Nav/>

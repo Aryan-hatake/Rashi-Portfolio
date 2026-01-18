@@ -37,14 +37,14 @@ const LetsWork = () => {
           </div>
           <div className="handle">
             <span><Suspense fallback={null}>
-              <RiGlobalLine />
+              <RiInstagramLine />
             </Suspense>
             </span>
             <span>rashii_asthana</span>
           </div>
           <div className="handle">
             <span><Suspense fallback={null}>
-              <RiGlobalLine />
+              <RiMailLine />
             </Suspense>
             </span>
             <span>rashiasthana.b@gmail.com</span>
