@@ -6,7 +6,7 @@
   --pri2: black;
   --sec: white;
   --sec2: rgb(170, 163, 163);
-  --bebo:"Bebas Neue", sans-serif;
+  --bebo: "Bebas Neue", sans-serif;
 }
 
 * {
@@ -701,10 +701,14 @@ body #root .Main .work .left .socials .handle span svg {
 html #root .Main .work .right,
 body #root .Main .work .right {
   width: clamp(50rem, 100vw, 100rem);
+  height: 100vh;
+  min-height: 600px;
 }
-html #root .Main .work .right div,
-body #root .Main .work .right div {
-  transform: translateX(-32%);
+html #root .Main .work .right .splineWrap,
+body #root .Main .work .right .splineWrap {
+  height: 100%;
+  width: 100%;
+  transform: translateX(-34%);
 }
 
 @media (min-width: 600px) {
@@ -925,7 +929,7 @@ body #root .Main .work .right div {
     flex-shrink: 0;
     width: 65%;
   }
-  html body #root .Main .work .right div {
+  html body #root .Main .work .right .splineWrap {
     transform: translateX(0%) translateY(-10%);
   }
 }/*# sourceMappingURL=style.css.map */

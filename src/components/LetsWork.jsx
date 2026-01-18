@@ -1,14 +1,9 @@
 import { lazy, Suspense, React } from "react";
+import useInView from "../hooks/useInView";
 
-const RiGlobalLine = lazy(() =>
-  import("@remixicon/react").then(m => ({ default: m.RiGlobalLine }))
-);
-const RiInstagramLine = lazy(() =>
-  import("@remixicon/react").then(m => ({ default: m.RiInstagramLine }))
-);
-const RiMailLine = lazy(() =>
-  import("@remixicon/react").then(m => ({ default: m.RiMailLine }))
-);
+import { RiGlobalLine } from "@remixicon/react/RiGlobalLine";
+import { RiInstagramLine } from "@remixicon/react/RiInstagramLine";
+import { RiMailLine } from "@remixicon/react/RiMailLine";
 
 const Spline = lazy(() =>
   import("@splinetool/react-spline").then(module => ({
@@ -17,6 +12,9 @@ const Spline = lazy(() =>
 );
 
 const LetsWork = () => {
+
+  const [ref, visible] = useInView()
+
   return (
     <div className='work'>
       <div className="left">
@@ -29,34 +27,37 @@ const LetsWork = () => {
         <div className="socials">
           <div className="handle">
             <span>
-              <Suspense fallback={null}>
+             
                 <RiGlobalLine />
-              </Suspense>
+             
             </span>
             <span>www.rashimodeling.com</span>
           </div>
           <div className="handle">
-            <span><Suspense fallback={null}>
+            <span>
               <RiInstagramLine />
-            </Suspense>
+            
             </span>
             <span>rashii_asthana</span>
           </div>
           <div className="handle">
-            <span><Suspense fallback={null}>
+            <span>
               <RiMailLine />
-            </Suspense>
+       
             </span>
             <span>rashiasthana.b@gmail.com</span>
           </div>
         </div>
       </div>
-      <div className="right">
+      <div ref={ref} className="right">
+        <div className="splineWrap">
+
         <Suspense fallback={null}>
-          <Spline scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" />
+         { visible && <Spline scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" />}
         </Suspense>
 
       </div>
+        </div>
     </div>
   )
 }
