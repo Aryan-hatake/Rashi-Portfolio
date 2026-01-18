@@ -91,6 +91,7 @@ body #root .Main .Home-Cont {
   height: -moz-fit-content;
   height: fit-content;
   border-bottom: 0.2rem solid var(--sec);
+  min-height: 100vh;
 }
 html #root .Main .Home-Cont .Home,
 body #root .Main .Home-Cont .Home {
