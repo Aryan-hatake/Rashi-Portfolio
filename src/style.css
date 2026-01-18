@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bokor&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import './fonts.css';
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 :root {
   --pri: rgb(19, 19, 19);
   --backdrop: rgba(0, 0, 0, 0.801);
   --pri2: black;
   --sec: white;
   --sec2: rgb(170, 163, 163);
-  --bebo: "Bebas Neue", sans-serif;
+  --bebo:"Bebas Neue", sans-serif;
 }
 
-@font-face {
-  font-family: Curvy;
-  src: url(/assets/Gistesy.ttf);
-}
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +53,7 @@ body #root .Main nav {
 }
 html #root .Main nav h2,
 body #root .Main nav h2 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--bebo);
   font-size: 2rem;
 }
 html #root .Main nav h2 span,
@@ -69,9 +66,13 @@ html #root .Main nav .milestone,
 body #root .Main nav .milestone {
   display: none;
   justify-content: center;
+  font-weight: 100;
   align-items: center;
   gap: 2rem;
-  font-weight: 200;
+}
+html #root .Main nav .milestone span,
+body #root .Main nav .milestone span {
+  font-weight: 100;
 }
 html #root .Main nav .milestone .m-Line,
 body #root .Main nav .milestone .m-Line {
@@ -104,10 +105,16 @@ html #root .Main .Home-Cont .Home .left,
 body #root .Main .Home-Cont .Home .left {
   height: 50%;
   width: 100%;
-  background: url("/images/14.jpeg");
-  background-size: cover;
-  background-position: center;
   border-bottom: 0.5rem solid var(--sec);
+}
+html #root .Main .Home-Cont .Home .left img,
+body #root .Main .Home-Cont .Home .left img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 html #root .Main .Home-Cont .Home .right,
 body #root .Main .Home-Cont .Home .right {
@@ -125,6 +132,7 @@ body #root .Main .Home-Cont .Home .right .top .name {
 html #root .Main .Home-Cont .Home .right .top .name h1,
 body #root .Main .Home-Cont .Home .right .top .name h1 {
   font-family: var(--bebo);
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
 }
@@ -189,6 +197,7 @@ body #root .Main .About .first {
 html #root .Main .About .first h1,
 body #root .Main .About .first h1 {
   font-family: var(--bebo);
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
 }
@@ -335,6 +344,7 @@ body #root .Main .Strength .first {
 html #root .Main .Strength .first h1,
 body #root .Main .Strength .first h1 {
   font-family: var(--bebo);
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
 }
@@ -446,6 +456,7 @@ body #root .Main .Project .left .project-cont h2:last-child {
   position: relative;
   left: clamp(5.6rem, 44%, 58rem);
   font-family: var(--bebo);
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
   width: -moz-fit-content;
@@ -561,6 +572,7 @@ body #root .Main .Services .top .head {
 html #root .Main .Services .top .head h2,
 body #root .Main .Services .top .head h2 {
   font-family: var(--bebo);
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
 }
@@ -645,6 +657,7 @@ body #root .Main .work .left {
 html #root .Main .work .left .head h2,
 body #root .Main .work .left .head h2 {
   font-family: var(--bebo);
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 15rem);
   white-space: nowrap;
   font-size: clamp(3rem, 20vw, 20rem);

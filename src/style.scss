@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bokor&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import './fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 :root {
@@ -8,34 +8,31 @@
     --pri2: black;
     --sec: white;
     --sec2: rgb(170, 163, 163);
-    --bebo: "Bebas Neue", sans-serif;
+    --bebo:"Bebas Neue", sans-serif;
 }
 
-@font-face {
-    font-family: Curvy;
-    src: url(/assets/Gistesy.ttf);
 
-}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+   
     font-family: "Poppins", sans-serif;
+    
     color: white;
 }
 
 @mixin h1() {
     font-family: var(--bebo);
-
+    font-weight: 900;
     font-size: clamp(3rem, 10vw, 15rem);
     white-space: nowrap;
 }
 
 html,
 body {
-
+       
     width: 100%;
 
 
@@ -66,7 +63,7 @@ body {
                 justify-content: space-between;
 
                 h2 {
-                    font-family: "Bebas Neue", sans-serif;
+                    font-family: var(--bebo);
                     font-size: 2rem;
 
                     span {
@@ -79,10 +76,13 @@ body {
                 .milestone {
                     display: none;
                     justify-content: center;
+                    font-weight: 100 ;
                     align-items: center;
                     gap: 2rem;
-                    font-weight: 200;
-
+                
+                    span{
+                        font-weight: 100 ;
+                    }
                     .m-Line {
                         height: 0.1rem;
                         width: 3rem;
@@ -112,11 +112,15 @@ body {
 
                     .left {
                         height: 50%;
-                        width: 100%;
-                        background: url("./images/14.jpeg");
-                        background-size: cover;
-                        background-position: center;
+                        width: 100%; 
                         border-bottom: 0.5rem solid var(--sec);
+
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-position: center;
+                            object-fit: cover;
+                        }
 
                     }
 

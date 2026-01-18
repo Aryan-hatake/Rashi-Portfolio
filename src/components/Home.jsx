@@ -5,7 +5,9 @@ const Home = () => {
     <div className="Home-Cont">
 
     <div className='Home'>
-     <div className="left"></div>
+     <div className="left">
+      <img src="./images/14.webp"  alt="" />
+     </div>
      <div className="right">
       <div className="top">
         <div className="name">

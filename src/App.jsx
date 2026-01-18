@@ -1,12 +1,14 @@
 import React from 'react'
-import Home from './components/Home'
-import Nav from './components/Nav'
 import './style.css'
-import About from './components/About'
-import Strength from './components/Strength'
-import Project from './components/Project'
-import Services from './components/Services'
-import LetsWork from './components/LetsWork'
+const About = React.lazy(() => import('./components/About'))
+const Home = React.lazy(() => import('./components/Home'))
+const Nav= React.lazy(() => import('./components/Nav'))
+const Strength = React.lazy(() => import('./components/Strength'))
+const Project = React.lazy(() => import('./components/Project'))
+const Services = React.lazy(() => import('./components/Services'))
+const LetsWork = React.lazy(() => import('./components/LetsWork'))
+
+
 
 
 

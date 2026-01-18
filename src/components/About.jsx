@@ -10,12 +10,12 @@ const About = () => {
       <div className="second">
         <div className="right">
           <div className="img-Cont">
-            <img src="/images/9.jpeg" alt="" />
+            <img src="/images/9.webp" loading='lazy' alt="" />
           </div>
         </div>
         <div className="left">
             <div className="img-Cont">
-            <img src="/images/10.jpeg" alt="" />
+            <img src="/images/10.webp" loading='lazy' alt="" />
           </div>
         </div>
       </div>
