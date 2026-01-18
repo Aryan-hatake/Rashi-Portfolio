@@ -702,7 +702,7 @@ body #root .Main .work .left .socials .handle span svg {
 html #root .Main .work .right,
 body #root .Main .work .right {
   width: clamp(50rem, 100vw, 100rem);
-  height: 100vh;
+  height: 50vh;
   min-height: 600px;
 }
 html #root .Main .work .right .splineWrap,

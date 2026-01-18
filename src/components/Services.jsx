@@ -5,7 +5,7 @@ const Services = () => {
     <div className='Services '>
       <div className="top">
         <div className="vidT">
-            <video playsInline preload='none' autoPlay loop muted src="/videos/5.mp4"></video>
+            <video playsInline preload='none' autoPlay loop muted src="/videos/5.webm"></video>
         </div>
         <div className="head">
             <h2>Services</h2>
@@ -14,7 +14,7 @@ const Services = () => {
       </div>
       <div className="bottom">
         <div className="vidB">
-            <video playsInline preload='none' autoPlay loop muted src="/videos/4.mp4"></video>
+            <video playsInline preload='none' autoPlay loop muted src="/videos/4.webm"></video>
         </div>
         <div className="serv-list">
             <div className="serv">

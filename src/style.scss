@@ -708,7 +708,7 @@ body {
 
                 .right {
                     width: clamp(50rem, 100vw, 100rem);
-                    height: 100vh; // REQUIRED
+                    height: 50vh; // REQUIRED
                     min-height: 600px;
 
                     .splineWrap {
