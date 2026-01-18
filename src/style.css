@@ -909,8 +909,8 @@ body #root .Main .work .right .splineWrap {
     padding-bottom: 0.001rem;
   }
   html body #root .Main .Services .bottom .vidB {
-    height: 30vw;
-    width: 30vw;
+    height: clamp(4rem, 30vw, 30rem);
+    width: clamp(4rem, 30vw, 30rem);
   }
   html body #root .Main .Services .bottom .serv-list {
     width: 60%;

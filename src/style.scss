@@ -1015,8 +1015,8 @@ body {
                             padding-bottom: 0.001rem;
 
                             .vidB {
-                                height: 30vw;
-                                width: 30vw;
+                             height: clamp(4rem, 30vw, 30rem);
+                                width: clamp(4rem, 30vw, 30rem);
 
                             }
 
