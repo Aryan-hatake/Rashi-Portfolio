@@ -1,9 +1,9 @@
-import { lazy, Suspense, React } from "react";
+import { lazy, Suspense, React, useEffect,useState } from "react";
 import useInView from "../hooks/useInView";
 
-import { RiGlobalLine } from "@remixicon/react/RiGlobalLine";
-import { RiInstagramLine } from "@remixicon/react/RiInstagramLine";
-import { RiMailLine } from "@remixicon/react/RiMailLine";
+import { RiGlobalLine } from "@remixicon/react";
+import { RiInstagramLine } from "@remixicon/react";
+import { RiMailLine } from "@remixicon/react";
 
 const Spline = lazy(() =>
   import("@splinetool/react-spline").then(module => ({
@@ -13,7 +13,16 @@ const Spline = lazy(() =>
 
 const LetsWork = () => {
 
-  const [ref, visible] = useInView()
+  const [ref, visible] = useInView({ rootMargin: "200px" })
+  const [ready, setReady] = useState(false);
+
+   useEffect(() => {
+    if (!visible) return;
+
+    requestIdleCallback(() => {
+      setReady(true);
+    });
+  }, [visible]);
 
   return (
     <div className='work'>
@@ -52,9 +61,11 @@ const LetsWork = () => {
       <div ref={ref} className="right">
         <div className="splineWrap">
 
+         { ready &&
         <Suspense fallback={null}>
-         { visible && <Spline scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" />}
+          <Spline scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" />
         </Suspense>
+          }
 
       </div>
         </div>
