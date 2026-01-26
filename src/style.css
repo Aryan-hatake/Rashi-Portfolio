@@ -743,6 +743,7 @@ body #root .Main .work .right .splineWrap {
 @media (min-width: 1400px) {
   html body #root .Main .Home-Cont .Home {
     flex-direction: row;
+    min-height: 100vh;
   }
   html body #root .Main .Home-Cont .Home .left {
     width: 50%;
@@ -927,6 +928,7 @@ body #root .Main .work .right .splineWrap {
   }
   html body #root .Main .work .right {
     flex-shrink: 0;
+    height: 100vh;
     width: 65%;
   }
   html body #root .Main .work .right .splineWrap {

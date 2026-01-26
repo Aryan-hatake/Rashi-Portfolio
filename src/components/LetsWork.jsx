@@ -1,21 +1,24 @@
+
 import { lazy, Suspense, React, useEffect,useState } from "react";
 import useInView from "../hooks/useInView";
 
 import { RiGlobalLine } from "@remixicon/react";
 import { RiInstagramLine } from "@remixicon/react";
 import { RiMailLine } from "@remixicon/react";
-
 const Spline = lazy(() =>
   import("@splinetool/react-spline").then(module => ({
     default: module.default || module.Spline
   }))
 );
 
+
+
 const LetsWork = () => {
 
-  const [ref, visible] = useInView({ rootMargin: "200px" })
+    const [ref, visible] = useInView({ rootMargin: "200px" })
   const [ready, setReady] = useState(false);
 
+  
    useEffect(() => {
     if (!visible) return;
 
@@ -58,10 +61,9 @@ const LetsWork = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className="right">
+      <div  ref={ref} className="right">
         <div className="splineWrap">
-
-         { ready &&
+           { ready &&
         <Suspense fallback={null}>
           <Spline scene="https://prod.spline.design/odQAikM1hUyTF1nq/scene.splinecode" />
         </Suspense>
