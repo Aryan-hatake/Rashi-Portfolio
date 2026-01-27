@@ -97,7 +97,7 @@ body #root .Main nav {
   background: var(--backdrop);
   display: flex;
   width: 100%;
-  position: sticky;
+  position: fixed;
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
   top: -1px;

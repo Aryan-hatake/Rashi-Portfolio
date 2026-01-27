@@ -103,7 +103,7 @@ body {
                 background: var(--backdrop);
                 display: flex;
                 width: 100%;
-                position: sticky;
+                position: fixed;
                 backdrop-filter: blur(7px);
                 top: -1px;
                 z-index: 5;
