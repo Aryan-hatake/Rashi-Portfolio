@@ -34,6 +34,7 @@ html #root .Main,
 body #root .Main {
   width: 100%;
   max-width: 2600px;
+  overflow: hidden;
   position: relative;
   background: var(--pri);
 }
@@ -152,13 +153,12 @@ body #root .Main .Home-Cont .Home .right .center {
   position: absolute;
   width: 50%;
   top: 50%;
-  right: 0;
+  right: 0%;
   border-top: 0.4rem solid var(--sec2);
   padding-top: 1rem;
 }
 html #root .Main .Home-Cont .Home .right .center p,
 body #root .Main .Home-Cont .Home .right .center p {
-  opacity: 0;
   color: var(--sec2);
   font-size: clamp(0.6rem, 2vw, 2rem);
 }
@@ -172,10 +172,14 @@ html #root .Main .Home-Cont .Home .right .bottom button,
 body #root .Main .Home-Cont .Home .right .bottom button {
   padding-inline: 2rem;
   padding-block: 0.8rem;
-  color: var(--pri);
   background: var(--sec);
-  font-size: clamp(1rem, 4vw, 2rem);
   border: none;
+}
+html #root .Main .Home-Cont .Home .right .bottom button a,
+body #root .Main .Home-Cont .Home .right .bottom button a {
+  color: var(--pri);
+  font-size: clamp(1rem, 4vw, 2rem);
+  text-decoration: none;
 }
 html #root .Main .About,
 body #root .Main .About {
@@ -695,6 +699,10 @@ body #root .Main .work .left .socials .handle span {
   display: flex;
   align-items: center;
 }
+html #root .Main .work .left .socials .handle span a,
+body #root .Main .work .left .socials .handle span a {
+  text-decoration: none;
+}
 html #root .Main .work .left .socials .handle span svg,
 body #root .Main .work .left .socials .handle span svg {
   width: clamp(1rem, 2vw, 4rem);
@@ -759,6 +767,9 @@ body #root .Main .work .right .splineWrap {
   }
   html body #root .Main .Home-Cont .Home .right .top .name h1 {
     font-size: clamp(2rem, 8vw, 12rem);
+  }
+  html body #root .Main .Home-Cont .Home .right .center {
+    right: 0;
   }
   html body #root .Main .Home-Cont .Home .right .bottom {
     bottom: 10%;
@@ -939,5 +950,10 @@ body #root .Main .work .right .splineWrap {
   }
   html body #root .Main .work .right .splineWrap {
     transform: translateX(0%) translateY(-10%);
+  }
+}
+@media (max-width: 500px) {
+  html body .Main .Home-Cont .Home .right .center {
+    right: 5%;
   }
 }/*# sourceMappingURL=style.css.map */

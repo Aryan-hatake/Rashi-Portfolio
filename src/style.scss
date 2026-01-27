@@ -45,7 +45,8 @@ body {
 
         .Main {
             width: 100%;
-            max-width: 2600px;
+            max-width: 2600px; 
+            overflow: hidden;
             position: relative;
             background: var(--pri);
 
@@ -131,6 +132,7 @@ body {
                         height: 50%;
                         width: 100%;
                         padding: 2rem;
+                        
                         position: relative;
 
                         .top {
@@ -159,12 +161,12 @@ body {
                             position: absolute;
                             width: 50%;
                             top: 50%;
-                            right: 0;
+                            right: 0%;
                             border-top: 0.4rem solid var(--sec2);
                             padding-top: 1rem;
 
                             p {
-                                opacity: 0;
+                      
                                 color: var(--sec2);
                                 font-size: clamp(0.6rem, 2vw, 2rem);
                             }
@@ -179,10 +181,15 @@ body {
                             button {
                                 padding-inline: 2rem;
                                 padding-block: 0.8rem;
-                                color: var(--pri);
                                 background: var(--sec);
-                                font-size: clamp(1rem, 4vw, 2rem);
                                 border: none;
+                                 
+                            a{
+
+                                color: var(--pri);
+                                font-size: clamp(1rem, 4vw, 2rem);
+                                text-decoration: none;
+                            }
 
                             }
                         }
@@ -699,6 +706,10 @@ body {
                                 display: flex;
                                 align-items: center;
 
+                                a{
+                                    text-decoration: none;
+                                }
+
                                 svg {
                                     width: clamp(1rem, 2vw, 4rem);
                                     height: clamp(1rem, 2vw, 4rem);
@@ -813,7 +824,10 @@ body {
                                         }
                                     }
                                 }
-
+                                
+                                .center{
+                                    right: 0;
+                                }
                                 .bottom {
 
 
@@ -1059,4 +1073,21 @@ body {
             }
         }
     }
+}
+@media (max-width:500px) {
+     html{
+        body{
+            .Main{
+               .Home-Cont{
+                .Home{
+                    .right{
+                        .center{
+                            right: 5%;
+                        }
+                    }
+                }
+               }
+            }
+        }
+     }
 }

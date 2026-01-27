@@ -5,12 +5,15 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import SplitText from "gsap/SplitText";
+import { useMediaQuery } from 'react-responsive'
 
 const Services = () => {
      
     gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger)
   gsap.registerPlugin(SplitText);
+
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 1400px)' })
 
   const price  = useRef()
   const serv1  = useRef()
@@ -20,24 +23,35 @@ const Services = () => {
   useGSAP(()=>{
     let tl = gsap.timeline();
 
-    tl.from(".vidT ",{
+   { !isSmallScreen &&  tl.from(".vidB ",{
       opacity:0.2,
       ease:"power4.inOut",
       scrollTrigger:{
         trigger:".Services",
-        markers:true,
+       
         start:"top 50%",
         end:"bottom bottom",
         scrub:2
       }
-    })
-
-    tl.from(".vidB ",{
+    })}
+   { isSmallScreen &&  tl.from(".vidB ",{
       opacity:0.2,
       ease:"power4.inOut",
       scrollTrigger:{
         trigger:".Services",
-        markers:true,
+        
+        start:"50% top",
+        end:"bottom bottom",
+        scrub:2
+      }
+    })}
+
+    tl.from(".vidT",{
+      opacity:0.2,
+      ease:"power4.inOut",
+      scrollTrigger:{
+        trigger:".Services",
+  
         start:"top 50%",
         end:"bottom bottom",
         scrub:2
@@ -50,29 +64,47 @@ const Services = () => {
        ease:"power4.inOut",
        scrollTrigger:{
         trigger:".Services",
-        markers:true,
+   
         start:"top 50%",
         end:"bottom bottom",
         scrub:2
       }
     })
+   { 
+    !isSmallScreen &&
     tl.from(".top .head",{
       opacity:0.2,
       x:30,
  
       scrollTrigger:{
         trigger:".Services",
-        markers:true,
+ 
         start:"top top",
         end:"bottom bottom",
         scrub:2
       }
-    })
+    })}
+
+    {isSmallScreen &&
+
+      tl.from(".top .head",{
+        opacity:0.2,
+        x:30,
+        
+        scrollTrigger:{
+          trigger:".Services",
+      
+          start:"top 70%",
+          end:"bottom bottom",
+          scrub:2
+        }
+      })
+    }
   })
      
 
   return (
-    <div className='Services '>
+    <div id='Services' className='Services '>
       <div className="top">
         <div className="vidT">
             <video playsInline preload='none' autoPlay loop muted src="/videos/5.webm"></video>

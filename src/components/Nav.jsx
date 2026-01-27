@@ -60,7 +60,7 @@ const Nav = () => {
    useGSAP(() => {
       let tl = gsap.timeline()
 
-      tl.from("h2", {
+      tl.from("nav h2", {
          opacity: 0,
          duration: 0.8,
          ease: "power1.inOut",
@@ -96,7 +96,7 @@ const Nav = () => {
    })
 
    return (
-      <nav>
+      <nav id='Nav'>
          <h2 >Rashi <span    >Asthana</span></h2>
          <div className="milestone">
             <span ref={teenIndia} onMouseEnter={() => { matrixText(teenIndia) }}  >TEEN INDIA FINALIST</span>

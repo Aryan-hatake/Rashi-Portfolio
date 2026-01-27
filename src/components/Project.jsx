@@ -57,7 +57,7 @@ const text  =  useRef()
         scrub:2
       }
     })
-    tl.from(".right",{
+    tl.from(".Project .right",{
       opacity:0.5,
       x:40,
       scrollTrigger:{
@@ -92,7 +92,7 @@ const text  =  useRef()
   return (
 
 
-  <div className="Project">
+  <div id='Project' className="Project">
     <div className="left">
       <div className="project-cont">
         <h2>Project</h2>

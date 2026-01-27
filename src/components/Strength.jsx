@@ -86,7 +86,7 @@ const Strength = () => {
   })
 
   return (
-    <div className='Strength'>
+    <div id='Strength' className='Strength'>
       {!isSmallScreen && <div className="second-lg">
         <div className="imgCont">
           <img ref={img1}  onMouseMove={(e)=>{imgMove(img1,e)}} onMouseLeave={()=>{imgDefault(img2)}} loading="lazy" src="/images/4.webp" alt="" />

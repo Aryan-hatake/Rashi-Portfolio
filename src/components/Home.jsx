@@ -80,9 +80,9 @@ const Home = () => {
             duration:0.8,
             ease:"sine.inOut"
      })
-     tl.to(para.current,{
+     tl.from(para.current,{
             
-            opacity:1,
+            opacity:0,
             
             duration:0.4,
             ease:"sine.inOut"
@@ -98,7 +98,7 @@ const Home = () => {
 
 
   return (
-    <div className="Home-Cont">
+    <div id='Home' className="Home-Cont">
 
     <div className='Home'>
      <div className="left">
@@ -116,7 +116,7 @@ const Home = () => {
       </div>
       <div className="bottom">
          <button>
-           Know More
+           <a href="#About">Know More</a>
          </button>
       </div>
      </div>

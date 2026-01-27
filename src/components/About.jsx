@@ -168,6 +168,7 @@ const About = () => {
   return () => {
   split1.revert();
   split2.revert();
+  split3.revert();
 };
 
 
@@ -175,7 +176,7 @@ const About = () => {
   })
 
   return (
-    <div className='About'>
+    <div id='About' className='About'>
       <div className="first">
         <h1>ABOUT ME</h1>
         <h3>Rashi Asthana .</h3>
