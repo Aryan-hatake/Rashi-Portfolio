@@ -1004,6 +1004,7 @@ body {
                             flex-direction: row;
                             justify-content: center;
                             border: 0rem solid var(--sec2);
+                            
 
                             .vidT {
                                 transform: translateY(-2px);
@@ -1018,7 +1019,7 @@ body {
                             flex-direction: row;
                             justify-content: space-evenly;
                             padding-bottom: 0.001rem;
-                            border: 0.1rem solid var(--sec2);
+                            border-bottom: 0.1rem solid var(--sec2);
                             .vidB {
                              height: clamp(4rem, 30vw, 30rem);
                                 width: clamp(4rem, 30vw, 30rem);

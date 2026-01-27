@@ -912,7 +912,7 @@ body #root .Main .work .right .splineWrap {
     flex-direction: row;
     justify-content: space-evenly;
     padding-bottom: 0.001rem;
-    border: 0.1rem solid var(--sec2);
+    border-bottom: 0.1rem solid var(--sec2);
   }
   html body #root .Main .Services .bottom .vidB {
     height: clamp(4rem, 30vw, 30rem);

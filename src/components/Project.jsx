@@ -57,9 +57,9 @@ const text  =  useRef()
         scrub:2
       }
     })
-    tl.from(".right .story",{
+    tl.from(".right",{
       opacity:0.5,
-      x:20,
+      x:40,
       scrollTrigger:{
         trigger:".Project",
         scroller:"body",

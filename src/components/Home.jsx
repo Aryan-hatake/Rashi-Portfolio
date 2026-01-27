@@ -50,7 +50,9 @@ const Home = () => {
     //      end:"bottom bottom",
             // scrub:2
     //  }})
-     let tl = gsap.timeline();
+     let tl = gsap.timeline({
+      delay:2
+     });
 
      tl.from(".left",{
             
