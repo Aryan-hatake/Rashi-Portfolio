@@ -38,7 +38,7 @@ const About = () => {
       const split3 = new SplitText(para3.current, {
     type: "chars"
   });
-  console.log(split2)
+
 
 
     let tl = gsap.timeline({

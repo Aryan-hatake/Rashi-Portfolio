@@ -38,7 +38,6 @@ const LetsWork = () => {
               scroller:"body",
               start:"top 50%",
               end:"bottom bottom",
-              markers:true,
               scrub:2
             }
           })
@@ -50,7 +49,6 @@ const LetsWork = () => {
               scroller:"body",
               start:"top 50%",
               end:"60% bottom",
-              markers:true,
               scrub:2
             }
           })
@@ -63,7 +61,6 @@ const LetsWork = () => {
               scroller:"body",
               start:"top 50%",
               end:"60% bottom",
-              markers:true,
               scrub:2
             }
           })
@@ -75,7 +72,6 @@ const LetsWork = () => {
               scroller:"body",
               start:"top 50%",
               end:"60% bottom",
-              markers:true,
               scrub:2
             }
           })

@@ -6,7 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { matrixText } from './Nav'
 
 export   const imgMove =  (element,e)=>{
-     console.log(element)
+     
          gsap.to(element.current,{
            scale:1.4,
            x:e.clientX/10,
